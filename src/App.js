@@ -17,13 +17,33 @@ class Hello extends React.Component {
 }
 
 class ProjectBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.hide_toggle = this.hide_toggle.bind(this);
+  }
+  hide_toggle(name, description) {
+    this.props.hide_callback(name, description);
+  }
+
   render() {
     return (
       <div className="ProjectBar">
         <div className="horizontal-scroll-wrapper">
-          <Project name="WinMan" description="Terminal “Window Manager” in C" />
-          <Project name="GoState" description="State machine framework in go" />
-          <Project name="Databash" description="Database system POC in bash" />
+          <Project
+            name="WinMan"
+            description="Terminal “Window Manager” in C"
+            hide_callback={this.hide_toggle}
+          />
+          <Project
+            name="GoState"
+            description="State machine framework in go"
+            hide_callback={this.hide_toggle}
+          />
+          <Project
+            name="Databash"
+            description="Database system POC in bash"
+            hide_callback={this.hide_toggle}
+          />
         </div>
       </div>
     );
@@ -37,10 +57,8 @@ const calc = (x, y) => [
 
 const trans = (x, y, s) =>
   `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-const trans2 = (x, y, s) => `rotateX(0deg) rotateY(0deg) scale(4*${s})`;
 
 function Project(props) {
-  const [is_hovering, toggle_hover] = useState(false);
   const [is_clicked, toggle_click] = useState(false);
 
   const [my_props, set] = useSpring(() => ({
@@ -52,7 +70,7 @@ function Project(props) {
       <animated.div
         className="Project_inside"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-        onClick={() => toggle_click(!is_clicked)}
+        onClick={() => props.hide_callback(props.name, props.description)}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{
           transform: my_props.xys.interpolate(trans)
@@ -65,11 +83,80 @@ function Project(props) {
   );
 }
 
-export default function App() {
-  return (
-    <div className="App">
-      <Hello name="Julien LE THENO" />
-      <ProjectBar />
-    </div>
-  );
+class HomePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.hide_toggle = this.hide_toggle.bind(this);
+  }
+
+  hide_toggle(name, description) {
+    this.props.switch_to_project_callback(name, description);
+  }
+  render() {
+    return (
+      <div>
+        <div>
+          <Hello name="Julien LE THENO" />
+          <ProjectBar hide_callback={this.hide_toggle} />
+        </div>
+      </div>
+    );
+  }
+}
+
+class ProjectPage extends React.Component {
+  render() {
+    return (
+      <div
+        className="BigProject"
+        onClick={() => this.props.switch_to_homepage_callback()}
+      >
+        <h3>{this.props.name}</h3>
+        <div className="Description">{this.props.description}</div>
+      </div>
+    );
+  }
+}
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.switch_to_project = this.switch_to_project.bind(this);
+    this.switch_to_homepage = this.switch_to_homepage.bind(this);
+    this.state = {
+      project_page: false,
+      project_name: "",
+      project_description: ""
+    };
+  }
+  switch_to_project(name, description) {
+    console.log(name, description);
+
+    this.setState({
+      project_page: true,
+      project_name: name,
+      project_description: description
+    });
+  }
+  switch_to_homepage() {
+    this.setState({ project_page: false });
+  }
+  render() {
+    return (
+      <div className="App">
+        {this.state.project_page ? (
+          <ProjectPage
+            switch_to_homepage_callback={this.switch_to_homepage}
+            name={this.state.project_name}
+            description={this.state.project_description}
+          />
+        ) : (
+          <HomePage switch_to_project_callback={this.switch_to_project} />
+        )}
+      </div>
+    );
+  }
+}
+
+export default function display_app() {
+  return <App />;
 }
