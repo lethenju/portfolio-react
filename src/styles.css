@@ -1,0 +1,76 @@
+.App {
+  font-family: roboto;
+  margin: 0px;
+  height: 100%;
+}
+
+#hello {
+  margin-left: 109px;
+  margin-top: 104px;
+}
+h1 {
+  font-family: roboto;
+  font-weight: 100;
+  font-size: 73.91px;
+  margin: 0px;
+}
+#my-name {
+  margin: 0px;
+  background: #000;
+  display: inline-block;
+}
+h2 {
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #fff;
+  letter-spacing: 3px;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 73.48px;
+}
+
+.ProjectBar {
+  position: relative;
+  margin-top: 200px;
+  box-sizing: border-box;
+}
+
+.Project_inside {
+  background: #2e294e;
+  box-shadow: 0px 0px 51px #aaa;
+
+  width: 400px;
+  height: 350px;
+  will-change: transform;
+}
+.Project {
+  padding: 5px;
+  margin-left: 167px;
+  margin-bottom: 167px;
+
+  margin-right: 0px;
+  display: inline-block;
+
+  width: 400px;
+  height: 350px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-left: 20px;
+  letter-spacing: 3px;
+  color: #fff;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 41.17px;
+}
+
+.Description {
+  color: #fff;
+  font-family: roboto;
+  font-weight: 100;
+  margin-left: 30px;
+  margin-top: 100px;
+  font-size: 24px;
+}
