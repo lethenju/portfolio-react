@@ -29,10 +29,20 @@ class ProjectBar extends React.Component {
     );
   }
 }
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 20,
+  (x - window.innerWidth / 2) / 20,
+  1.1
+];
+
 const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+  `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+const trans2 = (x, y, s) => `rotateX(0deg) rotateY(0deg) scale(4*${s})`;
 
 function Project(props) {
+  const [is_hovering, toggle_hover] = useState(false);
+  const [is_clicked, toggle_click] = useState(false);
+
   const [my_props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 }
@@ -41,11 +51,12 @@ function Project(props) {
     <div className="Project">
       <animated.div
         className="Project_inside"
-        onMouseMove={({ clientX: x, clientY: y }) =>
-          set({ xys: [x * 2, y * 2] })
-        }
-        onMouseLeave={() => set({ xys: [0, 0, 0] })}
-        style={{ transform: my_props.xys.interpolate(trans) }}
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+        onClick={() => toggle_click(!is_clicked)}
+        onMouseLeave={() => set({ xys: [0, 0, 1] })}
+        style={{
+          transform: my_props.xys.interpolate(trans)
+        }}
       >
         <h3>{props.name}</h3>
         <p className="Description">{props.description}</p>
