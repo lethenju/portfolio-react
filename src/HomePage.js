@@ -1,5 +1,6 @@
 import React, { Children } from "react";
 import ProjectBar from "./ProjectBar";
+import ProfilePanel from "./ProfilePanel";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 function Hello(props) {
@@ -25,6 +26,7 @@ export default function HomePage(props) {
   return (
     <div>
       <Hello name="Julien LE THENO" />
+      <ProfilePanel />
       <ProjectBar hide_callback={props.switch_to_project_callback} />
     </div>
   );

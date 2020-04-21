@@ -1,0 +1,22 @@
+import React from "react";
+
+export default function ProfilePanel(props) {
+  return (
+    <div className="ProfilePanel">
+      <div className="ProfilePanel_SidePane">
+        <img
+          className="img_profile"
+          src="https://avatars3.githubusercontent.com/u/19967417?s=460&u=ecd48d2ab4260cbee902be8fde3828068cd5f0f2&v=4"
+          alt="profile pic"
+        />
+      </div>
+      <div className="ProfilePanel_MainPane">
+        <div className="ProfilePanel_Title">Embedded Systems Engineer</div>
+        <div className="ProfilePanel_Description">
+          Passionate about system developpement, Linux, C and C++.
+          <br /> I worked at Sagemcom for 2 years in Tunisia.
+        </div>
+      </div>
+    </div>
+  );
+}

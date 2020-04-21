@@ -84,7 +84,6 @@ example_test.c is the unit test to test the library
 `;
 
 export const resMan_md = `
-# Resman
 Resman is a resource manager
 
 It aims to wrap your normal malloc calls into a system that keeps 

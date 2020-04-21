@@ -59,6 +59,7 @@ export default function ProjectPage(props) {
             <div className="img_placeholder" /> // When there is no image yet
           ) : (
             <img
+              className="img_project"
               src={localStorage.getItem("screenshot")}
               alt="Project screenshot"
             />
