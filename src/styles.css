@@ -4,22 +4,16 @@
   height: 100%;
 }
 
-#hello {
+.hello {
   margin-left: 109px;
   margin-top: 104px;
 }
-h1 {
-  font-family: roboto;
-  font-weight: 100;
-  font-size: 73.91px;
-  margin: 0px;
-}
-#my-name {
+.my-name {
   margin: 0px;
   background: #000;
   display: inline-block;
 }
-h2 {
+.my-name_text {
   margin: 0px;
   margin-left: 10px;
   margin-right: 10px;
@@ -28,6 +22,17 @@ h2 {
   font-family: roboto;
   font-weight: 500;
   font-size: 73.48px;
+}
+h1 {
+  font-family: roboto;
+  font-weight: 100;
+  font-size: 73.91px;
+  margin: 0px;
+}
+
+h2 {
+  color: #fff;
+  font-weight: 200;
 }
 
 .ProjectBar {
@@ -55,7 +60,83 @@ h2 {
   width: 400px;
   height: 350px;
 }
+.Description {
+  color: #fff;
+  font-family: roboto;
+  font-weight: 100;
+  margin-left: 30px;
+  margin-top: 100px;
+  font-size: 24px;
+}
 
+@media (max-width: 1200px) {
+  .hello {
+    text-align: center;
+    margin-left: 0;
+  }
+  .ProjectBar {
+    text-align: center;
+    margin-left: 0;
+  }
+  .Project {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 167px;
+  }
+}
+@media (max-width: 850px) {
+  h1 {
+    font-size: 50px;
+  }
+  .my-name_text {
+    font-size: 50px;
+  }
+
+  h2 {
+    color: #fff;
+    font-weight: 200;
+  }
+
+  .ProjectBar {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .Project_inside {
+    background: #2e294e;
+    box-shadow: 0px 0px 51px #aaa;
+    width: 100%;
+
+    will-change: transform;
+  }
+  .Project {
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 20%;
+
+    margin-right: 0px;
+    display: inline-block;
+
+    height: 350px;
+  }
+  .Description {
+    color: #fff;
+    font-family: roboto;
+    font-weight: 100;
+    margin-left: 30px;
+    margin-top: 100px;
+    font-size: 24px;
+  }
+}
+/* PROJECT PAGE*/
+.ProjectPage {
+  position: absolute;
+  background: #2e294e;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 h3 {
   margin-top: 20px;
   margin-left: 20px;
@@ -65,12 +146,114 @@ h3 {
   font-weight: 500;
   font-size: 41.17px;
 }
+p {
+  color: #aff;
+}
 
-.Description {
+.ProjectPage_sidePane {
+  position: fixed;
+  margin-left: 105px;
+}
+.ProjectPage_Name {
+  margin-top: 111px;
+
+  letter-spacing: 8px;
+  color: #fff;
+  font-family: roboto;
+  font-weight: 700;
+  font-size: 97.03px;
+}
+
+.ProjectPage_Description {
+  margin-top: 20px;
+  margin-left: 30px;
   color: #fff;
   font-family: roboto;
   font-weight: 100;
-  margin-left: 30px;
-  margin-top: 100px;
   font-size: 24px;
+}
+
+.ProjectPage_Link {
+  margin-top: 20px;
+  margin-left: 30px;
+  color: #fff;
+  font-family: roboto;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 24px;
+}
+.ProjectPage_mainPane {
+  margin-left: 40%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.ProjectPage_mainPane_article {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+}
+img {
+  margin-top: 50px;
+  padding: 5px;
+  width: 100%;
+}
+.img_placeholder {
+  margin-top: 200px;
+  padding: 5px;
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .ProjectPage_sidePane {
+    position: relative;
+    align-content: center;
+    width: auto;
+    margin-left: 10%;
+  }
+
+  .ProjectPage_Name {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .ProjectPage_Description {
+    text-align: center;
+    margin: 0;
+    font-size: 17px;
+  }
+  .ProjectPage_Link {
+    text-align: center;
+    margin: 0;
+    font-size: 17px;
+  }
+  .img_placeholder {
+    margin-top: 50px;
+  }
+  .ProjectPage_mainPane {
+    height: 80%;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.projectanim-enter {
+  opacity: 0;
+  transform: scale(0.7);
+}
+.projectanim-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.projectanim-exit {
+  opacity: 1;
+}
+.projectanim-exit-active {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 300ms, transform 300ms;
 }
