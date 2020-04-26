@@ -49,9 +49,9 @@ export default function ProjectPage(props) {
       onClick={() => props.switch_to_homepage_callback()}
     >
       <div className="ProjectPage_sidePane">
-        <div className="ProjectPage_Name">{props.name}</div>
-        <div className="ProjectPage_Description">{props.description}</div>
-        <div className="ProjectPage_Link">{localStorage.getItem("github")}</div>
+        <h1>{props.name}</h1>
+        <h3>{props.description}</h3>
+        <div className="Link">{localStorage.getItem("github")}</div>
       </div>
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">
@@ -59,7 +59,6 @@ export default function ProjectPage(props) {
             <div className="img_placeholder" /> // When there is no image yet
           ) : (
             <img
-              className="img_project"
               src={localStorage.getItem("screenshot")}
               alt="Project screenshot"
             />

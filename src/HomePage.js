@@ -8,7 +8,7 @@ function Hello(props) {
     <div className="hello">
       <h1> Hi ! I am </h1>
       <div className="my-name">
-        <div className="my-name_text"> {props.name}</div>
+        <h1> {props.name}</h1>
       </div>
     </div>
   );
