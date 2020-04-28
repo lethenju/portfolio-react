@@ -259,6 +259,19 @@ p {
   font-weight: 100;
   font-size: 24px;
 }
+
+.BackButton {
+  background-color: #3e5c76;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin: 10px;
+  margin-top: 100px;
+}
+.IconBackButton {
+  color: #a7adc6;
+}
 .ProjectPage_mainPane {
   margin-left: 40%;
   width: 50%;
@@ -319,6 +332,12 @@ p {
     padding-top: 10px;
     width: 90%;
     margin: auto;
+  }
+
+  .BackButton {
+    position: relative;
+
+    margin: 10px;
   }
 }
 

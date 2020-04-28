@@ -1,5 +1,9 @@
 import React from "react";
 import MarkdownView from "react-showdown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
 import {
   winman_md,
   databash_md,
@@ -8,6 +12,8 @@ import {
   resMan_md,
   logSystem_md
 } from "./ProjectsMd.js";
+
+library.add(faArrowLeft);
 
 export default function ProjectPage(props) {
   if (props.name === "WinMan") {
@@ -44,14 +50,21 @@ export default function ProjectPage(props) {
   }
 
   return (
-    <div
-      className="ProjectPage"
-      onClick={() => props.switch_to_homepage_callback()}
-    >
+    <div className="ProjectPage">
       <div className="ProjectPage_sidePane">
         <h1>{props.name}</h1>
         <h3>{props.description}</h3>
         <div className="Link">{localStorage.getItem("github")}</div>
+        <button
+          className="BackButton"
+          onClick={() => props.switch_to_homepage_callback()}
+        >
+          <FontAwesomeIcon
+            className="IconBackButton"
+            icon={faArrowLeft}
+            size="6x"
+          />
+        </button>
       </div>
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">
