@@ -14,23 +14,7 @@ function Hello(props) {
   );
 }
 
-function setScroll(value) {
-  window.scroll(0, value);
-}
-const useMountEffect = fun => useEffect(fun, []);
-
 export default function HomePage(props) {
-  const [elementPosition, setElementPosition] = React.useState({
-    x: 0,
-    y: props.scroll_position
-  });
-  useMountEffect(setScroll(props.scroll_position_getter()));
-
-  useScrollPosition(({ prevPos, currPos }) => {
-    setElementPosition(currPos.x, currPos.y);
-    props.update_scroll_callback(currPos.y);
-  });
-
   return (
     <div>
       <Hello name="Julien LE THENO" />
