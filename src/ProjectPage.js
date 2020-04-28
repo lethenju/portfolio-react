@@ -55,16 +55,18 @@ export default function ProjectPage(props) {
         <h1>{props.name}</h1>
         <h3>{props.description}</h3>
         <div className="Link">{localStorage.getItem("github")}</div>
-        <button
-          className="BackButton"
-          onClick={() => props.switch_to_homepage_callback()}
-        >
-          <FontAwesomeIcon
-            className="IconBackButton"
-            icon={faArrowLeft}
-            size="6x"
-          />
-        </button>
+        <div id="wrapperButton">
+          <button
+            className="BackButton"
+            onClick={() => props.switch_to_homepage_callback()}
+          >
+            <FontAwesomeIcon
+              className="IconBackButton"
+              icon={faArrowLeft}
+              size="6x"
+            />
+          </button>
+        </div>
       </div>
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">

@@ -6,6 +6,7 @@
 body {
   margin: 0;
 }
+
 .hello {
   margin-left: 109px;
   margin-top: 104px;
@@ -262,12 +263,18 @@ p {
 
 .BackButton {
   background-color: #3e5c76;
+  margin: auto;
+  display: block;
   border: 0;
   border-radius: 10px;
   padding: 10px;
-  width: 100%;
-  margin: 10px;
+  width: 80%;
   margin-top: 100px;
+  transition: all 0.5s;
+}
+.BackButton:hover {
+  background-color: #42617d;
+  width: 100%;
 }
 .IconBackButton {
   color: #a7adc6;
@@ -336,8 +343,9 @@ p {
 
   .BackButton {
     position: relative;
-
-    margin: 10px;
+    width: 20%;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 

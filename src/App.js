@@ -29,16 +29,13 @@ class App extends React.Component {
   switch_to_homepage() {
     // Prevent selecting text to change page
     var selection = window.getSelection();
-    if (selection.toString().length === 0) {
-      this.setState({ project_page: false });
-    }
+    this.setState({ project_page: false });
   }
 
   render() {
     return (
       <div className="App">
         <HomePage switch_to_project_callback={this.switch_to_project} />
-
         <CSSTransition
           in={this.state.project_page}
           timeout={300}
