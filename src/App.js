@@ -37,6 +37,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <HomePage switch_to_project_callback={this.switch_to_project} />
+
         <CSSTransition
           in={this.state.project_page}
           timeout={300}
@@ -49,10 +51,6 @@ class App extends React.Component {
             description={this.state.project_description}
           />
         </CSSTransition>
-
-        {this.state.project_page ? null : (
-          <HomePage switch_to_project_callback={this.switch_to_project} />
-        )}
       </div>
     );
   }

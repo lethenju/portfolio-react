@@ -11,6 +11,7 @@ export default function ProjectBar(props) {
           description="Terminal “Window Manager” in C"
           hide_callback={props.hide_callback}
         />
+
         <Project
           name="GoState"
           description="State machine framework in go"

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ProjectBar from "./ProjectBar";
 import ProfilePanel from "./ProfilePanel";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 function Hello(props) {
   return (

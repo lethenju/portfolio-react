@@ -208,7 +208,7 @@ h2 {
 }
 /* PROJECT PAGE*/
 .ProjectPage {
-  position: absolute;
+  position: fixed;
   background: #2e294e;
   top: 0;
   left: 0;
