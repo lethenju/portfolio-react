@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectBar from "./ProjectBar";
 import ProfilePanel from "./ProfilePanel";
+import Footer from "./Footer";
 
 function Hello(props) {
   return (
@@ -19,6 +20,7 @@ export default function HomePage(props) {
       <Hello name="Julien LE THENO" />
       <ProfilePanel />
       <ProjectBar hide_callback={props.switch_to_project_callback} />
+      <Footer />
     </div>
   );
 }
