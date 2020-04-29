@@ -22,39 +22,37 @@ export default function ProjectBar(props) {
   return (
     // todo : -> use github API to automatically generate project informations
     <div className="ProjectBar">
-      <div className="horizontal-scroll-wrapper">
-        <ProjectGeneric
-          name="WinMan"
-          description="Terminal “Window Manager” in C"
-          hide_callback={props.hide_callback}
-        />
+      <ProjectGeneric
+        name="WinMan"
+        description="Terminal “Window Manager” in C"
+        hide_callback={props.hide_callback}
+      />
 
-        <ProjectGeneric
-          name="GoState"
-          description="State machine framework in go"
-          hide_callback={props.hide_callback}
-        />
-        <ProjectGeneric
-          name="Databash"
-          description="Database system POC in bash"
-          hide_callback={props.hide_callback}
-        />
-        <ProjectGeneric
-          name="TestMan"
-          description="Micro Unit Test framework in C"
-          hide_callback={props.hide_callback}
-        />
-        <ProjectGeneric
-          name="ResMan"
-          description="Resource Manager"
-          hide_callback={props.hide_callback}
-        />
-        <ProjectGeneric
-          name="Log System"
-          description="Small log system in C"
-          hide_callback={props.hide_callback}
-        />
-      </div>
+      <ProjectGeneric
+        name="GoState"
+        description="State machine framework in go"
+        hide_callback={props.hide_callback}
+      />
+      <ProjectGeneric
+        name="Databash"
+        description="Database system POC in bash"
+        hide_callback={props.hide_callback}
+      />
+      <ProjectGeneric
+        name="TestMan"
+        description="Micro Unit Test framework in C"
+        hide_callback={props.hide_callback}
+      />
+      <ProjectGeneric
+        name="ResMan"
+        description="Resource Manager"
+        hide_callback={props.hide_callback}
+      />
+      <ProjectGeneric
+        name="Log System"
+        description="Small log system in C"
+        hide_callback={props.hide_callback}
+      />
     </div>
   );
 }
