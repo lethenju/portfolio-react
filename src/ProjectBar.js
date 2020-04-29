@@ -68,6 +68,9 @@ const trans = (x, y, s) =>
   `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 function ProjectGeneric(props) {
+  // If we're in mobile, don't use react spring : theres a display bug when moving
+  // to project page (the tile is merging in the new page, creating
+  // unwanted glitches..)
   if (window.mobileCheck()) {
     return (
       <ProjectNotAnimated
