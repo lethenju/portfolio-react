@@ -13,7 +13,7 @@ body {
 }
 .my-name {
   margin: 0px;
-  background: #000;
+  background-color: #2e294e;
   display: inline-block;
 }
 .hello h1 {
@@ -73,11 +73,20 @@ h2 {
 }
 
 @media (max-width: 1000px) {
+  .hello {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  .my-name {
+    margin: 0px;
+    margin-bottom: -30px;
+    background: #2e294e;
+    display: absolute;
+  }
   .ProfilePanel {
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 0px;
     width: 100%;
-    background-color: #3e5c76;
   }
   .ProfilePanel_SidePane {
     float: 0;
