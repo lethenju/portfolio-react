@@ -58,26 +58,22 @@ export default function ProjectPage(props) {
             {localStorage.getItem("github")}
           </a>
         </div>
-        <div id="wrapperButton">
-          <button
-            className="BackButton"
-            onClick={() => props.switch_to_homepage_callback()}
-          >
-            {window.innerWidth > 1000 ? (
+        {window.innerWidth > 1000 ? (
+          <div id="wrapperButton">
+            <button
+              className="BackButton"
+              onClick={() => props.switch_to_homepage_callback()}
+            >
               <FontAwesomeIcon
                 className="IconBackButton"
                 icon={faArrowLeft}
                 size="6x"
               />
-            ) : (
-              <FontAwesomeIcon
-                className="IconBackButton"
-                icon={faArrowLeft}
-                size="3x"
-              />
-            )}
-          </button>
-        </div>
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">
@@ -95,6 +91,22 @@ export default function ProjectPage(props) {
           />
         </div>
       </div>
+      {window.innerWidth < 1000 ? (
+        <div id="wrapperButton">
+          <button
+            className="BackButton"
+            onClick={() => props.switch_to_homepage_callback()}
+          >
+            <FontAwesomeIcon
+              className="IconBackButton"
+              icon={faArrowLeft}
+              size="3x"
+            />
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
