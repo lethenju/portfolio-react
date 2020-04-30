@@ -48,7 +48,6 @@ export default function ProjectPage(props) {
     localStorage.setItem("github", "not found");
     localStorage.setItem("screenshot", "");
   }
-
   return (
     <div className="ProjectPage">
       <div className="ProjectPage_sidePane">
@@ -60,11 +59,19 @@ export default function ProjectPage(props) {
             className="BackButton"
             onClick={() => props.switch_to_homepage_callback()}
           >
-            <FontAwesomeIcon
-              className="IconBackButton"
-              icon={faArrowLeft}
-              size="6x"
-            />
+            {window.innerWidth > 1000 ? (
+              <FontAwesomeIcon
+                className="IconBackButton"
+                icon={faArrowLeft}
+                size="6x"
+              />
+            ) : (
+              <FontAwesomeIcon
+                className="IconBackButton"
+                icon={faArrowLeft}
+                size="3x"
+              />
+            )}
           </button>
         </div>
       </div>
