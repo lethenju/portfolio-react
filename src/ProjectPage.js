@@ -53,7 +53,11 @@ export default function ProjectPage(props) {
       <div className="ProjectPage_sidePane">
         <h1>{props.name}</h1>
         <h3>{props.description}</h3>
-        <div className="Link">{localStorage.getItem("github")}</div>
+        <div className="Link">
+          <a href={localStorage.getItem("github")}>
+            {localStorage.getItem("github")}
+          </a>
+        </div>
         <div id="wrapperButton">
           <button
             className="BackButton"
