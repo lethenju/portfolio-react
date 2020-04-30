@@ -14,41 +14,41 @@ Some nice TUI applications exists, like [tui-rs](https://github.com/fdehau/tui-r
 Winman stands for Window Manager. It is used as building blocks to create real TUI (Text User Interface) applications.
 
 It provides windows, that can be filled with widgets.
-Those widgets can be buttons, text, or simpler shapes. In the future there will be some complex widgets, as frames, scrollbars and other building blocks of window application.
+Those widgets can be buttons, text, or simpler shapes.
 
-It can be compared to ncurses in the fonctionnalities, but tries to be even more user friendly and have more window-like features
+## What I learned
 
-## Usage
-
-You can read and launch the example file to understand how to use the project.
-type make build_and_launch to build the whole system, the log system server and launch all what is needed.
-
-You can type to modify the windows name, press '0' to change in interwindow mode and move the windows themselves using ZQSD.
-
-Don't hesitate to tweak the example file to better understand what is going on.
-
-## Example
-
-Go read the examples/test.c file to read the code for the screenshot up there.
+I gained experience with C development and makefile building while developing this project.
 
 `;
 
 export const databash_md = `
-Simple database solution with Linux bash 
 
-## What for ?
+If you want to store data, you either have to develop a file-based API and choose a protocol
+for the storage (JSON, CSV, YAML..), or you can use a SQL server, which requires a lot of setup
+and drain a lot of resources if you want to develop for a small target.
 
-You want a simple CRUD system that is lighter than 400 lines of shell code ?
+This project was made to simplify all this, by giving you a permanent storage data solution, 
+based on bash and perl, with extensive use of regex.
 
-No nodeJS, no Python, no Ruby, no dependency, not even a compiled binary ?
+It is simple, it is fast, it is efficient.
 
-Here you go : this simple script based on sed and perl give you different APIs to manage your data just like any CRUD system.
+## Description
 
-## Usage
+A simple bash script give you an API (by parameters) to add, delete, update and get data to a 
+specific base.
 
-You can see the test.sh script to see how the script is used.
+It is made, like SQL, by tables in bases that you populate, and everything gets written in 
+one file.
 
-It will create a small table in the BASE file and query information from it
+A concurrency mechanism protects everything if several instances of Databash are using the same file
+at the same time.
+
+## What I learned
+
+I learned a lot and gained experience in regex manipulation with sed, and perl.
+I also got experienced in bash scripting.
+
 `;
 
 export const goState_md = `
