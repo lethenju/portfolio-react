@@ -257,15 +257,14 @@ p {
   margin: auto;
   display: block;
   border: 0;
-  border-radius: 10px;
+  border-radius: 50%;
   padding: 10px;
-  width: 80%;
+  width: 100px;
   margin-top: 100px;
   transition: all 0.5s;
 }
 .BackButton:hover {
   background-color: #42617d;
-  width: 100%;
 }
 .IconBackButton {
   color: #a7adc6;
@@ -315,12 +314,15 @@ p {
     text-align: center;
     font-size: 50px;
     margin: 0;
+    margin-top: 20px;
   }
 
   .ProjectPage h3 {
     text-align: center;
     margin: 0;
     font-size: 17px;
+
+    margin-top: 20px;
   }
   .ProjectPage .Link {
     text-align: center;
@@ -340,9 +342,13 @@ p {
 
   .BackButton {
     position: relative;
-    width: 80%;
+    height: 70px;
+    width: 70px;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .BackButton:hover {
+    margin-bottom: 20px;
   }
 }
 

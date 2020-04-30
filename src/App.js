@@ -27,8 +27,6 @@ class App extends React.Component {
     }
   }
   switch_to_homepage() {
-    // Prevent selecting text to change page
-    var selection = window.getSelection();
     this.setState({ project_page: false });
   }
 
