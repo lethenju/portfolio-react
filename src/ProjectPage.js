@@ -54,7 +54,7 @@ export default function ProjectPage(props) {
         <h1>{props.name}</h1>
         <h3>{props.description}</h3>
         <div className="Link">
-          <a href={localStorage.getItem("github")}>
+          <a href={"https://" + localStorage.getItem("github")}>
             {localStorage.getItem("github")}
           </a>
         </div>

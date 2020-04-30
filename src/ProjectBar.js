@@ -64,28 +64,23 @@ const calc = (x, y) => [
 
 const trans = (x, y, s) =>
   `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-
 function ProjectGeneric(props) {
-  // If we're in mobile, don't use react spring : theres a display bug when moving
+  const ua = navigator.userAgent.toLowerCase();
+  const Project =
+    ua.includes("safari") && !ua.includes("chrome")
+      ? ProjectNotAnimated
+      : ProjectAnimated;
+
+  // If we're on safari, don't use react spring : theres a display bug when moving
   // to project page (the tile is merging in the new page, creating
   // unwanted glitches..)
-  if (window.mobileCheck()) {
-    return (
-      <ProjectNotAnimated
-        name={props.name}
-        description={props.description}
-        hide_callback={props.hide_callback}
-      />
-    );
-  } else {
-    return (
-      <ProjectAnimated
-        name={props.name}
-        description={props.description}
-        hide_callback={props.hide_callback}
-      />
-    );
-  }
+  return (
+    <Project
+      name={props.name}
+      description={props.description}
+      hide_callback={props.hide_callback}
+    />
+  );
 }
 
 function ProjectAnimated(props) {

@@ -293,6 +293,10 @@ p {
   padding: 5px;
   width: 100%;
 }
+.Link a {
+  color: #fff;
+  text-decoration: none;
+}
 
 @media (max-width: 1400px) {
   .ProjectPage {
@@ -324,10 +328,7 @@ p {
     margin-top: 10px;
     font-size: 17px;
   }
-  .Link a {
-    color: #fff;
-    text-decoration: none;
-  }
+
   .ProjectPage img {
     margin-top: 50px;
   }
