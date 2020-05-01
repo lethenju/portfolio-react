@@ -77,7 +77,7 @@ export default function ProjectPage(props) {
             {localStorage.getItem("github")}
           </a>
         </div>
-        {window.innerWidth > 1000 ? (
+        {window.innerWidth > 1400 ? (
           <div id="wrapperButton">
             <button
               className="BackButton"
@@ -110,7 +110,7 @@ export default function ProjectPage(props) {
           />
         </div>
       </div>
-      {window.innerWidth < 1000 ? (
+      {window.innerWidth < 1400 ? (
         <div id="wrapperButton">
           <button
             className="BackButton"
