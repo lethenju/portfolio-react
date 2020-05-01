@@ -16,6 +16,25 @@ import {
 library.add(faArrowLeft);
 
 export default function ProjectPage(props) {
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  });
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return _ => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   if (props.name === "WinMan") {
     localStorage.setItem("markdown", winman_md);
     localStorage.setItem("github", "github.com/lethenju/winman");
