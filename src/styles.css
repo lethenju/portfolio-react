@@ -13,7 +13,7 @@ body {
 }
 .my-name {
   margin: 0px;
-  background-color: #2e294e;
+  background-color: #2b303a;
   display: inline-block;
 }
 .hello h1 {
@@ -41,7 +41,7 @@ h2 {
   display: inline-flex;
   margin-top: 100px;
   width: 100%;
-  background-color: #3e5c76;
+  background-color: #f97068;
 }
 .ProfilePanel_SidePane {
   margin-left: 10%;
@@ -80,7 +80,7 @@ h2 {
   .my-name {
     margin: 0px;
     margin-bottom: -30px;
-    background: #2e294e;
+    background: #2b303a;
     display: absolute;
   }
   .ProfilePanel {
@@ -129,7 +129,7 @@ h2 {
 }
 
 .Project_inside {
-  background: #2e294e;
+  background: #2b303a;
   box-shadow: 0px 0px 51px #aaa;
   width: 400px;
   height: 350px;
@@ -201,7 +201,7 @@ h2 {
 /* PROJECT PAGE*/
 .ProjectPage {
   position: fixed;
-  background: #2e294e;
+  background: #2b303a;
   top: 0;
   left: 0;
   width: 100%;
@@ -211,7 +211,7 @@ h3 {
   margin-top: 20px;
   margin-left: 20px;
   letter-spacing: 3px;
-  color: #fff;
+  color: #57c4e5;
   font-family: roboto;
   font-weight: 500;
   font-size: 41.17px;
@@ -227,7 +227,7 @@ p {
 .ProjectPage h1 {
   margin-top: 111px;
   letter-spacing: 8px;
-  color: #fff;
+  color: #57c4e5;
   font-family: roboto;
   font-weight: 700;
   font-size: 97.03px;
@@ -236,7 +236,7 @@ p {
 .ProjectPage h3 {
   margin-top: 20px;
   margin-left: 30px;
-  color: #fff;
+  color: #57c4e5;
   font-family: roboto;
   font-weight: 100;
   font-size: 24px;
@@ -253,7 +253,7 @@ p {
 }
 
 .BackButton {
-  background-color: #3e5c76;
+  background-color: #f97068;
   margin: auto;
   display: block;
   border: 0;
@@ -264,10 +264,10 @@ p {
   transition: all 0.5s;
 }
 .BackButton:hover {
-  background-color: #42617d;
+  background-color: #57c4e5;
 }
 .IconBackButton {
-  color: #a7adc6;
+  color: #f9f7f3;
 }
 .ProjectPage_mainPane {
   margin-left: 40%;
