@@ -7,7 +7,7 @@ CLI applications, on the other hand, are often not user friendly for non-develop
 
 winman tries to tackle theses issues, via a complex window system, while maintaining a very easy to use API.
 
-Some nice TUI applications exists, like [tui-rs](https://github.com/fdehau/tui-rs) for rust, but not many uses a true window system.
+Some nice TUI applications exists, like ui-rs for rust, but not many uses a true window system.
 
 ## Description
 

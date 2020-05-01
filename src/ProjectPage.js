@@ -105,6 +105,7 @@ export default function ProjectPage(props) {
             />
           )}
           <MarkdownView
+            className="markdown_view"
             markdown={localStorage.getItem("markdown")}
             options={{ tables: true, emoji: true }}
           />
