@@ -60,7 +60,7 @@ export default function ProjectPage(props) {
     localStorage.setItem("screenshot", "");
   } else if (props.name === "Log System") {
     localStorage.setItem("markdown", logSystem_md);
-    localStorage.setItem("github", "github.com/lethenju/logsystem");
+    localStorage.setItem("github", "github.com/lethenju/log_system");
     localStorage.setItem("screenshot", "");
   } else {
     localStorage.setItem("markdown", "not found");
