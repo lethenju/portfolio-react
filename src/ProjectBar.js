@@ -41,10 +41,6 @@ function ProjectGeneric(props) {
   const Project = props.animated
       ? ProjectNotAnimated
       : ProjectAnimated;
-
-  // If we're on safari, don't use react spring : theres a display bug when moving
-  // to project page (the tile is merging in the new page, creating
-  // unwanted glitches..)
   return (
     <Project { ...props}
     />
