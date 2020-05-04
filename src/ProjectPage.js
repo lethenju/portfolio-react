@@ -5,18 +5,14 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 import {
-  winman_md,
-  databash_md,
-  goState_md,
-  testMan_md,
-  resMan_md,
-  logSystem_md
+  projects_articles
 } from "./ProjectsMd.js";
+const project_json = require('./projects.json'); //with path
 
 library.add(faArrowLeft);
 
 export default function ProjectPage(props) {
-  const [dimensions, setDimensions] = React.useState({
+  const [setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth
   });
@@ -35,37 +31,13 @@ export default function ProjectPage(props) {
     };
   });
 
-  if (props.name === "WinMan") {
-    localStorage.setItem("markdown", winman_md);
-    localStorage.setItem("github", "github.com/lethenju/winman");
-    localStorage.setItem(
-      "screenshot",
-      "https://i.ibb.co/C524Qvg/Screenshot-09052019-03-22-06-PM.png?raw=true"
-    );
-  } else if (props.name === "GoState") {
-    localStorage.setItem("markdown", goState_md);
-    localStorage.setItem("github", "github.com/lethenju/gostate");
-    localStorage.setItem("screenshot", "");
-  } else if (props.name === "Databash") {
-    localStorage.setItem("markdown", databash_md);
-    localStorage.setItem("github", "github.com/lethenju/databash");
-    localStorage.setItem("screenshot", "");
-  } else if (props.name === "TestMan") {
-    localStorage.setItem("markdown", testMan_md);
-    localStorage.setItem("github", "github.com/lethenju/testman");
-    localStorage.setItem("screenshot", "");
-  } else if (props.name === "ResMan") {
-    localStorage.setItem("markdown", resMan_md);
-    localStorage.setItem("github", "github.com/lethenju/resman");
-    localStorage.setItem("screenshot", "");
-  } else if (props.name === "Log System") {
-    localStorage.setItem("markdown", logSystem_md);
-    localStorage.setItem("github", "github.com/lethenju/log_system");
-    localStorage.setItem("screenshot", "");
-  } else {
-    localStorage.setItem("markdown", "not found");
-    localStorage.setItem("github", "not found");
-    localStorage.setItem("screenshot", "");
+  const project = project_json.projects.filter(project => project.name === props.name)[0]
+
+  const keys = Object.values(projects_articles)
+  for(const project_article of keys) {
+    if (project_article.name === project.name) {
+      project.markdown = project_article.markdown;
+    }
   }
   return (
     <div className="ProjectPage">
@@ -73,8 +45,8 @@ export default function ProjectPage(props) {
         <h1>{props.name}</h1>
         <h3>{props.description}</h3>
         <div className="Link">
-          <a href={"https://" + localStorage.getItem("github")}>
-            {localStorage.getItem("github")}
+          <a href={"https://" + project.link}>
+            {project.link}
           </a>
         </div>
         {window.innerWidth > 1400 ? (
@@ -96,17 +68,17 @@ export default function ProjectPage(props) {
       </div>
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">
-          {localStorage.getItem("screenshot") === "" ? (
+          {project.screenshot === "" ? (
             <div className="img_placeholder" /> // When there is no image yet
           ) : (
             <img
-              src={localStorage.getItem("screenshot")}
+              src={project.screenshot}
               alt="Project screenshot"
             />
           )}
           <MarkdownView
             className="markdown_view"
-            markdown={localStorage.getItem("markdown")}
+            markdown={project.markdown}
             options={{ tables: true, emoji: true }}
           />
         </div>

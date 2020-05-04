@@ -1,5 +1,14 @@
 // TODO -> Use Github API to automatically retrieve READMEs from projects
-export const winman_md = `
+export let projects_articles = 
+{
+  winman : {name:"WinMan"},
+  databash : {name:"DataBash"},
+  gostate : {name:"GoState"},
+  testman : {name:"TestMan"},
+  resman : {name:"ResMan"},
+  logsystem : {name:"LogSystem"},
+};
+projects_articles.winman.markdown = `
 
 When it comes to user interfaces, you rarely have the choice but to opt for a desktop environment to beneficiate complex features as multi-window systems. Those solutions are nice but goes heavy on ressources, if you are very limited with a low powered target, connected via SSH.
 
@@ -22,7 +31,7 @@ I gained experience with C development and makefile building while developing th
 
 `;
 
-export const databash_md = `
+projects_articles.databash.markdown = `
 
 If you want to store data, you either have to develop a file-based API and choose a protocol
 for the storage (JSON, CSV, YAML..), or you can use a SQL server, which requires a lot of setup
@@ -51,7 +60,7 @@ I also got experienced in bash scripting.
 
 `;
 
-export const goState_md = `
+projects_articles.gostate.markdown = `
 A simple framework for designing state machines in Go
 
 ## What is it ?
@@ -68,7 +77,7 @@ Any questions ?
 Send to julien.letheno@gmail.com, I will be happy to answer them !
 `;
 
-export const testMan_md = `
+projects_articles.testman.markdown = `
 
 A micro unit test framework for your C programs
 
@@ -83,7 +92,7 @@ example.h is the associated header
 example_test.c is the unit test to test the library
 `;
 
-export const resMan_md = `
+projects_articles.resman.markdown = `
 Resman is a resource manager
 
 It aims to wrap your normal malloc calls into a system that keeps 
@@ -94,7 +103,7 @@ trace of your allocated resources, and can free them even if you lost track of t
 See the test file for an example of how to allocate with resman
 `;
 
-export const logSystem_md = `
+projects_articles.logsystem.markdown  = `
   When designing applications, one of the most useful debugging tool is to trace
 what is happening in the application.
 For that, you could simply use a printf() function, but you will soon feel

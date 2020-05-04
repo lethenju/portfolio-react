@@ -1,41 +1,29 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
+const project_json = require('./projects.json'); //with path
+
+
+function makeProjects(props, ) {
+  let projects = [];
+  let id = 0;
+  for (const project of project_json.projects) {
+    id++;
+    projects.push(  
+      <ProjectGeneric
+        key={id}
+        name={project.name}
+        description={project.description}
+        hide_callback={props.hide_callback}
+      />)
+  }
+  return projects
+}
 
 export default function ProjectBar(props) {
+  // todo : -> use github API to automatically generate project informations
   return (
-    // todo : -> use github API to automatically generate project informations
     <div className="ProjectBar">
-      <ProjectGeneric
-        name="WinMan"
-        description="Terminal “Window Manager” in C"
-        hide_callback={props.hide_callback}
-      />
-
-      <ProjectGeneric
-        name="GoState"
-        description="State machine framework in go"
-        hide_callback={props.hide_callback}
-      />
-      <ProjectGeneric
-        name="Databash"
-        description="Database system POC in bash"
-        hide_callback={props.hide_callback}
-      />
-      <ProjectGeneric
-        name="TestMan"
-        description="Micro Unit Test framework in C"
-        hide_callback={props.hide_callback}
-      />
-      <ProjectGeneric
-        name="ResMan"
-        description="Resource Manager"
-        hide_callback={props.hide_callback}
-      />
-      <ProjectGeneric
-        name="Log System"
-        description="Small log system in C"
-        hide_callback={props.hide_callback}
-      />
+      {makeProjects(props)}
     </div>
   );
 }
@@ -58,10 +46,7 @@ function ProjectGeneric(props) {
   // to project page (the tile is merging in the new page, creating
   // unwanted glitches..)
   return (
-    <Project
-      name={props.name}
-      description={props.description}
-      hide_callback={props.hide_callback}
+    <Project { ...props}
     />
   );
 }
