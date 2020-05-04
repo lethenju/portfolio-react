@@ -12,17 +12,6 @@ import glob
 import shutil
 import json
 
-# For colored print
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-
 _path = "C:/Users/TEMP.JULIEN-PC/Documents/"
 _dev_dir="portfolio-react"
 _prod_dir="lethenju.github.io"
