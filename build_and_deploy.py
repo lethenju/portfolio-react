@@ -10,16 +10,37 @@ import os
 import subprocess
 import glob
 import shutil
+import json
+
+# For colored print
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 _path = "C:/Users/TEMP.JULIEN-PC/Documents/"
 _dev_dir="portfolio-react"
 _prod_dir="lethenju.github.io"
 
-print("=== AUTOMATED BUILD SCRIPT ===")
+
+print(" === AUTOMATED BUILD SCRIPT === ")
+
+os.system("cd "+_path+_dev_dir)
+
+# Grab version number
+with open("package.json", "r") as read_file:
+    data = json.load(read_file)
+version = data['version']
+
+print(f"{bcolors.OKBLUE}Version number : {bcolors.ENDC}"+ version)
 
 print("== Building Website ==")
 
-os.system("cd "+_path+_dev_dir)
 os.system("npm run build")
 
 print("== Remove old files ==")
@@ -64,7 +85,10 @@ print("== Deploy ==")
 
 os.system("cd "+_path+_prod_dir)
 
-message = input("Commit message : ");
+message = "DEPLOY - Version "+version
 os.system("git add *")
-subprocess.run("git commit -m '{message}'", check=True, shell=True) # Todo scrap version number from package.json
+os.system("git commit -m '{message}'") # Todo scrap version number from package.json
 
+os.system("git push") # Todo scrap version number from package.json
+
+print("== Done ==")
