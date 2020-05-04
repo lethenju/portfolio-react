@@ -79,7 +79,7 @@ Send to julien.letheno@gmail.com, I will be happy to answer them !
 
 projects_articles.testman.markdown = `
 
-A micro unit test framework for your C programs
+A reaally micro unit test framework for your C programs
 
 ## Usage
 
