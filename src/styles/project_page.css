@@ -1,0 +1,164 @@
+
+/* PROJECT PAGE*/
+.ProjectPage {
+    position: fixed;
+    background: #2b303a;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+    letter-spacing: 3px;
+    color: #57c4e5;
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 41.17px;
+  }
+  p {
+    color: #aff;
+  }
+  
+  .ProjectPage_sidePane {
+    position: fixed;
+    margin-left: 105px;
+  }
+  .ProjectPage h1 {
+    margin-top: 111px;
+    letter-spacing: 8px;
+    color: #57c4e5;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 97.03px;
+  }
+  
+  .ProjectPage h3 {
+    margin-top: 20px;
+    margin-left: 30px;
+    color: #57c4e5;
+    font-family: roboto;
+    font-weight: 100;
+    font-size: 24px;
+  }
+  
+  .ProjectPage .Link {
+    margin-top: 20px;
+    margin-left: 30px;
+    color: #fff;
+    font-family: roboto;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 24px;
+  }
+  
+  .BackButton {
+    background-color: #f97068;
+    margin: auto;
+    display: block;
+    border: 0;
+    border-radius: 50%;
+    padding: 10px;
+    width: 100px;
+    margin-top: 100px;
+    transition: all 0.5s;
+  }
+  .BackButton:hover {
+    background-color: #57c4e5;
+  }
+  .IconBackButton {
+    color: #f9f7f3;
+  }
+  .ProjectPage_mainPane {
+    margin-left: 40%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .ProjectPage_mainPane_article {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+  }
+  
+  .ProjectPage .markdown_view {
+    margin-bottom: 200px;
+  }
+  .ProjectPage img {
+    margin-top: 50px;
+    padding: 5px;
+    width: 100%;
+  }
+  .img_placeholder {
+    margin-top: 200px;
+    padding: 5px;
+    width: 100%;
+  }
+  .Link a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 1400px) {
+    .ProjectPage {
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+    }
+    .ProjectPage_sidePane {
+      position: relative;
+      align-content: center;
+      width: auto;
+      margin-left: 0;
+    }
+  
+    .ProjectPage h1 {
+      text-align: center;
+      font-size: 50px;
+      margin: 0;
+      margin-top: 20px;
+    }
+  
+    .ProjectPage h3 {
+      text-align: center;
+      margin: 0;
+      font-size: 17px;
+  
+      margin-top: 20px;
+    }
+    .ProjectPage .Link {
+      text-align: center;
+      margin: 0;
+      margin-top: 10px;
+      font-size: 17px;
+    }
+  
+    .ProjectPage img {
+      margin-top: 50px;
+    }
+    .ProjectPage_mainPane {
+      padding-top: 10px;
+      width: 90%;
+      margin: auto;
+    }
+  
+    .BackButton {
+      display: unset;
+      position: fixed;
+      bottom: 40px;
+      left: 40px;
+      height: 70px;
+      width: 70px;
+      box-shadow: 0px 0px 10px #222;
+    }
+    .BackButton:hover {
+      bottom: 35px;
+      left: 35px;
+      height: 80px;
+      width: 80px;
+    }
+  }
+  

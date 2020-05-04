@@ -1,0 +1,72 @@
+
+.ProfilePanel {
+    display: inline-flex;
+    margin-top: 100px;
+    width: 100%;
+    background-color: #f97068;
+  }
+  .ProfilePanel_SidePane {
+    margin-left: 10%;
+  }
+  .ProfilePanel_MainPane {
+    margin-bottom: 200px;
+    margin-left: 100px;
+  }
+  .ProfilePanel h2 {
+    margin-top: 70px;
+    color: #fff;
+    font-family: roboto;
+    font-weight: 100;
+    font-size: 60px;
+  }
+  .ProfilePanel p {
+    margin-top: 50px;
+    margin-left: 30px;
+    color: #fff;
+    font-family: roboto;
+    font-weight: 100;
+    font-size: 30px;
+  }
+  
+  .ProfilePanel img {
+    margin: 50px;
+    border-radius: 50%;
+    width: 350px;
+  }
+  
+@media (max-width: 1000px) {
+
+    .ProfilePanel {
+      display: inline-block;
+      margin-top: 0px;
+      width: 100%;
+    }
+    .ProfilePanel_SidePane {
+      float: 0;
+      width: 100%;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .ProfilePanel_MainPane {
+      float: 0;
+      width: 100%;
+      margin: auto;
+    }
+    .ProfilePanel h2 {
+      text-align: center;
+      font-size: 40px;
+    }
+    .ProfilePanel p {
+      margin: 10px;
+      margin-top: 50px;
+      font-size: 23px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .ProfilePanel img {
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+    }
+  }

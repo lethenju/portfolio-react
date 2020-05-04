@@ -1,0 +1,83 @@
+
+.App {
+    font-family: roboto;
+    margin: 0px;
+    height: 100%;
+  }
+  body {
+    margin: 0;
+  }
+  
+  .hello {
+    margin-left: 109px;
+    margin-top: 104px;
+  }
+  .my-name {
+    margin: 0px;
+    background-color: #2b303a;
+    display: inline-block;
+  }
+  .hello h1 {
+    font-family: roboto;
+    font-weight: 100;
+    font-size: 73.91px;
+    margin: 0px;
+  }
+  .my-name h1 {
+    margin: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    letter-spacing: 3px;
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 73.48px;
+  }
+  
+  h2 {
+    color: #fff;
+    font-weight: 200;
+  }
+
+
+  
+@media (max-width: 1200px) {
+    .hello {
+      text-align: center;
+      margin-left: 0;
+    }
+    .hello h1 {
+      font-size: 40px;
+    }
+    .my-name h1 {
+      font-size: 42px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hello {
+      margin-left: 0px;
+      margin-top: 50px;
+    }
+    .my-name {
+      margin: 0px;
+      margin-bottom: -30px;
+      background: #2b303a;
+      display: absolute;
+    }
+}
+
+
+@media (max-width: 850px) {
+    h1 {
+      font-size: 50px;
+    }
+    .my-name_text {
+      font-size: 50px;
+    }
+  
+    h2 {
+      color: #fff;
+      font-weight: 200;
+    }
+}  
