@@ -87,8 +87,8 @@ os.system("cd "+_path+_prod_dir)
 
 message = "DEPLOY - Version "+version
 os.system("git add *")
-os.system("git commit -m '{message}'") # Todo scrap version number from package.json
+os.system("git commit -m '{message}'")
 
-os.system("git push") # Todo scrap version number from package.json
+os.system("git push")
 
 print("== Done ==")
