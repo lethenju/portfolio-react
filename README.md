@@ -4,13 +4,11 @@ This is the source code of my personal, website, which hosts a brief description
 
 ## How is it done ?
 
-I used React to develop this front-only website. I am not a web developer, so the code may be not absolutely perfect..
+I used React to develop this front-only website. 
 
 ## Is it hosted somewhere ?
 
-I use codesandbox to develop the website (to be able to develop anywhere as quickly as possible and for it to be publicly available from a sharing link).
-
-But as the first version isnt really finished and polished as I want it to be, it is not really hosted for now.
+Yes of course : head to lethenju.github.io to see it up and running ! Please not this is the adress of the production code, and not the dev one, so it could be slightly different.
 
 ## Any questions or suggestions ?
 
