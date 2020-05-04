@@ -30,14 +30,14 @@ _prod_dir="lethenju.github.io"
 
 print(" === AUTOMATED BUILD SCRIPT === ")
 
-os.system("cd "+_path+_dev_dir)
+os.chdir(_path+_dev_dir)
 
 # Grab version number
 with open("package.json", "r") as read_file:
     data = json.load(read_file)
 version = data['version']
 
-print(f"{bcolors.OKBLUE}Version number : {bcolors.ENDC}"+ version)
+print("Version number : "+ version)
 
 print("== Building Website ==")
 
@@ -83,12 +83,11 @@ recursive_copy(_path+_dev_dir+"/build", _path+_prod_dir)
 
 print("== Deploy ==")
 
-os.system("cd "+_path+_prod_dir)
+os.chdir(_path+_prod_dir)
 
-message = "DEPLOY - Version "+version
+message = 'DEPLOY - Version '+version
 os.system("git add *")
-os.system("git commit -m '{message}'")
-
+os.system("git commit -m \""+message+"\"")
 os.system("git push")
 
 print("== Done ==")
