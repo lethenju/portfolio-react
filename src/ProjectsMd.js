@@ -2,7 +2,7 @@
 export let projects_articles = 
 {
   winman : {name:"WinMan"},
-  databash : {name:"DataBash"},
+  databash : {name:"Databash"},
   gostate : {name:"GoState"},
   testman : {name:"TestMan"},
   resman : {name:"ResMan"},
