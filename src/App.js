@@ -33,7 +33,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <HomePage switch_to_project_callback={this.switch_to_project} isVisible={this.state.project_page === false} />
+        <HomePage switch_to_project_callback={this.switch_to_project} animated={this.state.project_page === false} />
         <CSSTransition
           in={this.state.project_page}
           timeout={300}

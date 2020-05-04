@@ -20,7 +20,7 @@ export default function HomePage(props) {
     <div>
       <Hello name="Julien LE THENO" />
       <ProfilePanel />
-      ({(props.isVisible) ? (<ProjectBar hide_callback={props.switch_to_project_callback} />): ""})
+      <ProjectBar hide_callback={props.switch_to_project_callback} animated={props.animated} />
       <Footer />
     </div>
     );

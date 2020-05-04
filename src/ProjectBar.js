@@ -9,11 +9,12 @@ function makeProjects(props, ) {
   for (const project of project_json.projects) {
     id++;
     projects.push(  
-      <Project
+      <ProjectGeneric
         key={id}
         name={project.name}
         description={project.description}
         hide_callback={props.hide_callback}
+        animated={props.animated}
       />)
   }
   return projects
@@ -35,8 +36,22 @@ const calc = (x, y) => [
 
 const trans = (x, y, s) =>
   `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+function ProjectGeneric(props) {
+  const ua = navigator.userAgent.toLowerCase();
+  const Project = props.animated
+      ? ProjectNotAnimated
+      : ProjectAnimated;
 
-function Project(props) {
+  // If we're on safari, don't use react spring : theres a display bug when moving
+  // to project page (the tile is merging in the new page, creating
+  // unwanted glitches..)
+  return (
+    <Project { ...props}
+    />
+  );
+}
+
+function ProjectAnimated(props) {
   const [my_props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 }
@@ -56,6 +71,20 @@ function Project(props) {
         <h3>{props.name}</h3>
         <p className="Description">{props.description}</p>
       </animated.div>
+    </div>
+  );
+}
+// Theres a bug if I want to toggle animation in props..
+function ProjectNotAnimated(props) {
+  return (
+    <div className="Project">
+      <div
+        className="Project_inside"
+        onClick={() => props.hide_callback(props.name, props.description)}
+      >
+        <h3>{props.name}</h3>
+        <p className="Description">{props.description}</p>
+      </div>
     </div>
   );
 }
