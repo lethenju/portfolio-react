@@ -37,10 +37,10 @@ const calc = (x, y) => [
 const trans = (x, y, s) =>
   `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 function ProjectGeneric(props) {
-  const ua = navigator.userAgent.toLowerCase();
+
   const Project = props.animated
-      ? ProjectNotAnimated
-      : ProjectAnimated;
+      ? ProjectAnimated
+      : ProjectNotAnimated;
   return (
     <Project { ...props}
     />
