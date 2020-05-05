@@ -12,7 +12,7 @@ const project_json = require('./projects.json'); //with path
 library.add(faArrowLeft);
 
 export default function ProjectPage(props) {
-  const [setDimensions] = React.useState({
+  const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth
   });
@@ -41,6 +41,8 @@ export default function ProjectPage(props) {
   }
   return (
     <div className="ProjectPage">
+      
+      {window.innerWidth > 1400 ? (
       <div className="ProjectPage_sidePane">
         <h1>{props.name}</h1>
         <h3>{props.description}</h3>
@@ -49,7 +51,6 @@ export default function ProjectPage(props) {
             {project.link}
           </a>
         </div>
-        {window.innerWidth > 1400 ? (
           <div id="wrapperButton">
             <button
               className="BackButton"
@@ -62,12 +63,21 @@ export default function ProjectPage(props) {
               />
             </button>
           </div>
-        ) : (
-          ""
-        )}
       </div>
+        ) : null}
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">
+        {window.innerWidth < 1400 ? (
+          <div>
+            <h1>{props.name}</h1>
+            <h3>{props.description}</h3>
+            <div className="Link">
+              <a href={"https://" + project.link}>
+                {project.link}
+              </a>
+            </div>
+          </div>
+        ) : null }
           {project.screenshot === "" ? (
             <div className="img_placeholder" /> // When there is no image yet
           ) : (
