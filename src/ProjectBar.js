@@ -57,6 +57,7 @@ function ProjectAnimated(props) {
     <div className="Project">
       <animated.div
         className="Project_inside"
+        tabindex="0"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onClick={() => props.hide_callback(props.name, props.description)}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
