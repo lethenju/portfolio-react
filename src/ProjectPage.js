@@ -59,7 +59,7 @@ export default function ProjectPage(props) {
               <FontAwesomeIcon
                 className="IconBackButton"
                 icon={faArrowLeft}
-                size="6x"
+                size="2x"
               />
             </button>
           </div>
@@ -102,7 +102,7 @@ export default function ProjectPage(props) {
             <FontAwesomeIcon
               className="IconBackButton"
               icon={faArrowLeft}
-              size="3x"
+              size="2x"
             />
           </button>
         </div>
