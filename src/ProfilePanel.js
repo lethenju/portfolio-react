@@ -15,6 +15,8 @@ export default function ProfilePanel(props) {
         <p>
           Passionate about system developpement, Linux, C and C++.
           <br /> I worked at Sagemcom for 2 years in Tunisia.
+          <br />
+          <br /> I also love working on side projects ! You can see a few of them below :)
         </p>
       </div>
     </div>

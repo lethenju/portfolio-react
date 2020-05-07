@@ -9,7 +9,6 @@
     margin-left: 10%;
   }
   .ProfilePanel_MainPane {
-    margin-bottom: 200px;
     margin-left: 100px;
   }
   .ProfilePanel h2 {
@@ -51,6 +50,7 @@
       float: 0;
       width: 100%;
       margin: auto;
+      margin-bottom: 100px;
     }
     .ProfilePanel h2 {
       text-align: center;
