@@ -24,6 +24,7 @@ color: #f9f7f3;;
 .ProjectPage_sidePane {
 position: fixed;
 margin-left: 105px;
+width:450px;
 }
 .ProjectPage h1 {
 margin-top: 111px;

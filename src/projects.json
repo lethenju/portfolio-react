@@ -4,7 +4,21 @@
         "name": "WinMan",
         "description": "Terminal “Window Manager” in C",
         "link" :"github.com/lethenju/winman",
-        "screenshot":"https://i.ibb.co/C524Qvg/Screenshot-09052019-03-22-06-PM.png?raw=true",
+        "screenshot":"res/logo_winman.png",
+        "markdown": ""
+        },
+        {
+        "name": "TermLib",
+        "description": "Terminal UI library in C",
+        "link" :"github.com/lethenju/termlib",
+        "screenshot":"res/logo_termlib.png",
+        "markdown": ""
+        },
+        {
+        "name": "GoGenda",
+        "description": "CLI client for Google Agenda focused on productivity",
+        "link" :"github.com/lethenju/gogenda",
+        "screenshot":"res/logo_gogenda.png",
         "markdown": ""
         },
         {
@@ -32,14 +46,14 @@
         "name": "ResMan",
         "description": "Resource Manager in C",
         "link" :"github.com/lethenju/resman",
-        "screenshot":"",
+        "screenshot":"res/logo_resman.png",
         "markdown": ""
         },
         {
         "name": "LogSystem",
         "description": "Small log system in C",
         "link" :"github.com/lethenju/log_system",
-        "screenshot":"",
+        "screenshot":"res/logo_log_system.png",
         "markdown": ""
         }
 ]
