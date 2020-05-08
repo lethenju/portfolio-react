@@ -6,7 +6,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(faArrowLeft);
 
 export default function ProjectPage(props) {
-  const [dimensions, setDimensions] = React.useState({
+  const [_, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth
   });
