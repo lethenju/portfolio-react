@@ -30,7 +30,7 @@ export default function ProjectPage(props) {
   .then(path=>fetch(path))
   .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
   .then(md=>{project.markdown = md})
-  .catch(project.markdown = "Didnt find article :(")
+  .catch(err => {console.error(err);project.markdown = "Didnt find article :("})
 
   return (
     <div className="ProjectPage">
