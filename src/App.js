@@ -15,14 +15,13 @@ class App extends React.Component {
       project_description: ""
     };
   }
-  switch_to_project(name, description) {
+  switch_to_project(project) {
     // Prevent selecting text to change page
     var selection = window.getSelection();
     if (selection.toString().length === 0) {
       this.setState({
         project_page: true,
-        project_name: name,
-        project_description: description
+        project: project
       });
     }
   }
@@ -42,8 +41,7 @@ class App extends React.Component {
         >
           <ProjectPage
             switch_to_homepage_callback={this.switch_to_homepage}
-            name={this.state.project_name}
-            description={this.state.project_description}
+            project={this.state.project}
           />
         </CSSTransition>
       </div>

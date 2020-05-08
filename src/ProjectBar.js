@@ -1,6 +1,6 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
-const project_json = require('./projects.json'); //with path
+const project_json = require('./articles/projects.json'); //with path
 
 
 function makeProjects(props, ) {
@@ -11,8 +11,7 @@ function makeProjects(props, ) {
     projects.push(  
       <ProjectGeneric
         key={id}
-        name={project.name}
-        description={project.description}
+        project={project}
         hide_callback={props.hide_callback}
         animated={props.animated}
       />)
@@ -57,16 +56,16 @@ function ProjectAnimated(props) {
     <div className="Project">
       <animated.div
         className="Project_inside"
-        tabindex="0"
+        tabIndex="0"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-        onClick={() => props.hide_callback(props.name, props.description)}
+        onClick={() => props.hide_callback(props.project)}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{
           transform: my_props.xys.interpolate(trans)
         }}
       >
-        <h3>{props.name}</h3>
-        <p className="Description">{props.description}</p>
+        <h3>{props.project.name}</h3>
+        <p className="Description">{props.project.description}</p>
       </animated.div>
     </div>
   );
@@ -77,7 +76,7 @@ function ProjectNotAnimated(props) {
     <div className="Project">
       <div
         className="Project_inside"
-        onClick={() => props.hide_callback(props.name, props.description)}
+        onClick={() => props.hide_callback(props.project)}
       >
         <h3>{props.name}</h3>
         <p className="Description">{props.description}</p>
