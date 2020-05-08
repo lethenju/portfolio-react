@@ -25,12 +25,6 @@ export default function ProjectPage(props) {
     };
   });
   let project = props.project
-  import(`./articles/${project.name}.md`)
-  .then(m=>m.default)
-  .then(path=>fetch(path))
-  .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
-  .then(md=>{project.markdown = md})
-  .catch(err => {console.error(err);project.markdown = "Didnt find article :("})
 
   return (
     <div className="ProjectPage">

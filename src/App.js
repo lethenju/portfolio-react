@@ -18,12 +18,23 @@ class App extends React.Component {
   switch_to_project(project) {
     // Prevent selecting text to change page
     var selection = window.getSelection();
-    if (selection.toString().length === 0) {
+
+    // Load projects 
+    import(`./articles/${project.name}.md`)
+    .then(m=>m.default)
+    .then(path=>fetch(path))
+    .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
+    .then(md=>{project.markdown = md})
+    .catch(err => {console.error(err);project.markdown = "Didnt find article :("})
+    .then(_ => {if (selection.toString().length === 0) {
       this.setState({
         project_page: true,
         project: project
       });
-    }
+    }})
+  
+
+    
   }
   switch_to_homepage() {
     this.setState({ project_page: false });
