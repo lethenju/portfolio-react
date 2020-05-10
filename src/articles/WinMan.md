@@ -15,5 +15,5 @@ Those widgets can be buttons, text, or simpler shapes.
 
 ## What I learned
 
-I gained experience with C development and makefile building while developing this project.
+I gained experience with C development and makefile building while developing this project. I also learned how to use CMake when I switched from manual makefiles to Cmake.
 

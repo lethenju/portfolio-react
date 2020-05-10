@@ -2,7 +2,7 @@
 
 
 
-It has been already a couple of time (actually more than a year) that I log most of the things I do on google agenda.
+It has been some time (actually more than a year) that I log most of the things I do in my day, directly on google agenda.
 You may ask, why do I do it ?
 
 I like to have a view on how my days look like, without just relying on my biased point of vue. 
