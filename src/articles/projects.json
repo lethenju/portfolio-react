@@ -4,7 +4,7 @@
         "name": "WinMan",
         "description": "Terminal “Window Manager” in C",
         "link" :"github.com/lethenju/winman",
-        "screenshot":"res/logo_winman.png",
+        "screenshot":"res/logo_winman.svg",
         "markdown": ""
         },
         {
@@ -18,7 +18,7 @@
         "name": "GoGenda",
         "description": "CLI client for Google Agenda focused on productivity",
         "link" :"github.com/lethenju/gogenda",
-        "screenshot":"res/logo_gogenda.png",
+        "screenshot":"res/logo_gogenda.svg",
         "markdown": ""
         },
         {
