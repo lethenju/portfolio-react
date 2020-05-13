@@ -1,27 +1,27 @@
 
 
+Cela fait déjà quelques temps (en fait plus d'un an) que je log la plupart des choses que je fais de mes journées, directement sur Google Agenda.
+Vous vous demandez sûrement pourquoi je fais ca ?
 
+J'aime avoir une vue sur ce a quoi ressemblent mes journées, sans juste me fier a mon point de vue biaisé.
+J'aime vraiment voir si j'ai travaillé plus un tel jour ou un tel autre. Ne me jugez pas.
 
-It has been some time (actually more than a year) that I log most of the things I do in my day, directly on google agenda.
-You may ask, why do I do it ?
+Et je loggais tout a la main, dans l'application Google Agenda sur mon smartphone, ou plus fréquemment dans la web app Google Agenda. 
+En plus, l'UX de Google Agenda est pas vraiment adapté a cette utilisation : pour créer un événement d'une couleur particulière, il faut le creer avec la couleur par défault, puis modifier la couleur.
+Il est aussi impossible de mettre en place en un seul clic un événement commençant immédiatement.
 
-I like to have a view on how my days look like, without just relying on my biased point of vue. 
-I really love to see if I worked more a day or another. Dont judge me.
-
-And I was logging everything by hand, in the Google Calendar app on my phone, or more frequently on the website.
-Adding to that, the UX is pretty bad : to create an event with custom color, you had to create one and then modify the color.
-It was also impossible to set up an event from "now", I had to manually redo the 
-
-I wanted to automate a bit this action, as it can be quite overwhelming to have a google calendar tab open at all times..
-Also, google gives some cool apis to play with, and this project was the perfect occasion to try it.
+Je voulais automatiser un peu cette action, pour la simplifier largement.
+Et puis Google propose pas mal d'API cools a utiliser, et ce projet était l'occasion parfaite de les essayer
 
 ## Description
 
-GoGenda is a Go client of Google Agenda used for logging activities. You can use your custom categories and colors in a config.json file,
-to fit your needs.
+GoGenda est donc un client CLI de Google Agenda fait en Go, pour logger vos activités. Vous pouvez déclarer des catégories d'activités avec leur couleurs respectives dans un fichier config.json.
+
+Vous avez donc accès a plein d'API pour démarrer une nouvelle activité, la stopper, la supprimer, mais aussi en programmer a tout moment dans le passé et le futur, voir vos activités du jour et plein d'autres.
+Et tout ca avec une interface très simple a utiliser.
 
 ![Alt text](res/capture_gogenda.png)
 
-## What I learned
+## Ce que j'ai appris
 
-I gained experience with Go development, and OAuth2 security mechanism for the API.
+J'ai gagné beaucoup d'expérience en développement d'applications Go, et avec le mécanisme de sécurity OAuth2 pour l'API.
