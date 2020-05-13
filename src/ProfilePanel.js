@@ -18,6 +18,11 @@ export default function ProfilePanel(props) {
           <br />
           <br /> I also love working on side projects ! You can see a few of them below :)
         </p>
+        <div className="button_row">
+          <a className="button_big" href="https://www.github.com/lethenju">GitHub</a>
+          <a className="button_big" href="https://www.linkedin.com/in/julien-letheno/">LinkedIn</a>
+          <a className="button_big" href="mailto:julien.letheno@gmail.com">Send mail</a> 
+        </div>
       </div>
     </div>
   );
