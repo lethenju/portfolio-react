@@ -23,8 +23,10 @@ export default function HomePage(props) {
 
   return (
     <div>
-      <button onClick={() => {setLanguage('fr-FR'); props.set_language_callback('fr-FR')}}>fr</button>
-      <button onClick={() => {setLanguage('en-US'); props.set_language_callback('en-US')}}>en</button>
+      <div className="language_buttons">
+        <button className="language_button" onClick={() => {setLanguage('fr-FR'); props.set_language_callback('fr-FR')}}>fr</button>
+        <button className="language_button" onClick={() => {setLanguage('en-US'); props.set_language_callback('en-US')}}>en</button>
+      </div>
       <Hello language={language} name="Julien LE THENO" />
       <ProfilePanel language={language} />
       <ProjectBar language={language} hide_callback={props.switch_to_project_callback} animated={props.animated} />
