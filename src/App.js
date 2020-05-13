@@ -29,7 +29,7 @@ class App extends React.Component {
     .then(path=>fetch(path))
     .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
     .then(md=>{project.markdown = md})
-    .catch(err => {console.error(err);project.markdown = "Didnt find article :("})
+    .catch(err => {console.error(err);project.markdown = this.state.language === "fr-FR" ? "Article non trouvé :(" : "Didnt find article :("})
     .then(_ => {if (selection.toString().length === 0) {
       this.setState({
         project_page: true,
