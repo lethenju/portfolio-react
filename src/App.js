@@ -9,18 +9,22 @@ class App extends React.Component {
     super(props);
     this.switch_to_project = this.switch_to_project.bind(this);
     this.switch_to_homepage = this.switch_to_homepage.bind(this);
+    this.set_language = this.set_language.bind(this);
     this.state = {
       project_page: false,
-      project_name: "",
-      project_description: ""
+      language: window.navigator.language
     };
   }
   switch_to_project(project) {
     // Prevent selecting text to change page
-    var selection = window.getSelection();
-
+    let selection = window.getSelection();
     // Load projects 
-    import(`./articles/${project.name}.md`)
+    if (this.state.language === 'fr-FR'){
+      project.markdown = project.name+"_fr"
+    } else {
+      project.markdown = project.name
+    }
+    import(`./articles/${project.markdown}.md`)
     .then(m=>m.default)
     .then(path=>fetch(path))
     .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
@@ -39,11 +43,13 @@ class App extends React.Component {
   switch_to_homepage() {
     this.setState({ project_page: false });
   }
-
+  set_language(language) {
+    this.setState({language: language})
+  }
   render() {
     return (
       <div className="App">
-        <HomePage switch_to_project_callback={this.switch_to_project} animated={this.state.project_page === false} />
+        <HomePage language={this.state.language} set_language_callback={this.set_language} switch_to_project_callback={this.switch_to_project} animated={this.state.project_page === false} />
         <CSSTransition
           in={this.state.project_page}
           timeout={300}
@@ -52,6 +58,7 @@ class App extends React.Component {
         >
           <ProjectPage
             switch_to_homepage_callback={this.switch_to_homepage}
+            language={this.state.language}
             project={this.state.project}
           />
         </CSSTransition>

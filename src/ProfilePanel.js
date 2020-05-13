@@ -11,13 +11,27 @@ export default function ProfilePanel(props) {
         />
       </div>
       <div className="ProfilePanel_MainPane">
-        <h2>Embedded Systems Engineer</h2>
-        <p>
-          Passionate about system developpement, Linux, C and C++.
-          <br /> I worked at Sagemcom for 2 years in Tunisia.
-          <br />
-          <br /> I also love working on side projects ! You can see a few of them below :)
-        </p>
+        {props.language === "fr-FR" ? (
+        <div>
+          <h2>Ingénieur Systèmes Embarqués</h2>
+          <p>
+            Passioné de développement Système, Linux, C et C++.
+            <br /> J'ai travaillé pour Sagemcom pendant 2 ans en Tunisie
+            <br />
+            <br /> J'adore aussi travailler sur des projets personnels ! En voici quelques un :)
+          </p>
+        </div>
+        ) : (
+        <div>
+          <h2>Embedded Systems Engineer</h2>
+          <p>
+            Passionate about system developpement, Linux, C and C++.
+            <br /> I worked at Sagemcom for 2 years in Tunisia.
+            <br />
+            <br /> I also love working on side projects ! You can see a few of them below :)
+          </p>
+        </div>
+        )}
         <div className="button_row">
           <a className="button_big" href="https://www.github.com/lethenju">GitHub</a>
           <a className="button_big" href="https://www.linkedin.com/in/julien-letheno/">LinkedIn</a>

@@ -14,8 +14,10 @@ function makeProjects(props, ) {
         project={project}
         hide_callback={props.hide_callback}
         animated={props.animated}
+        language={props.language}
       />)
-  }
+    
+  } 
   return projects
 }
 
@@ -65,7 +67,7 @@ function ProjectAnimated(props) {
         }}
       >
         <h3>{props.project.name}</h3>
-        <p className="Description">{props.project.description}</p>
+        <p className="Description">{props.language === "fr-FR"? props.project.description_fr : props.project.description_en }</p>
       </animated.div>
     </div>
   );
