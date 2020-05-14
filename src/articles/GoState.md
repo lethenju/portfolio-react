@@ -1,15 +1,14 @@
+I like state machines, I like their formalism, their ability to simply modelise a yet complex system.
+They serve the understanding of a system, but also its setup, may it be to modelise it before development, as a demo, or directly as the spine of the system.
 
-A simple framework for designing state machines in Go
+State machines are incredible tools, and I wanted to make my own library to build some simple applications from them.
 
-## What is it ?
+## Here comes GoState
 
-You like to design state machines but you dont want to waste time with the implementation ? 
-This project aim to answer your needs and provide an easy way to design your state machines based programs very easily.
+So GoState is a little library that helps you to build your application simply by using states and transitions that you define, and functions which will be called in the states, and during the transitions.
 
-## Cool ! How can I use it ?
+I built a little fizzbuzz, and a mini textual adventure game in the examples, so you can see what that looks like.
 
-You need to declare your state machine first before playing with it. I will be working on 
-dynamic state setup later.
+## What I learned
 
-Any questions ?
-Send to julien.letheno@gmail.com, I will be happy to answer them !
+This project is the first one I realised in Go, I learned a lot of this langage (even if I didnt go far in the implementation of its advanced syntax, without corouutines, without async stuff etc..)
