@@ -72,7 +72,7 @@
         "markdown": ""
         },
         {
-        "name": "OpenGL_Framework",
+        "name": "OpenGL_FW",
         "description_en": "Minimalist OpenGL framework built on top of glfw, in C++",
         "description_fr": "Framework OpenGL minimaliste sur glfw, en C++",
         "link" :"github.com/lethenju/opengl_framework",

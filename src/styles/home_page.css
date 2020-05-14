@@ -69,6 +69,22 @@ h2 {
 }
 
 @media (max-width: 1000px) {
+  .language_buttons {
+    margin: 0
+  }
+  .language_button{
+    margin: 10px;
+    background-color: #fff;
+    color:#f97068;
+    border: 2px solid #f97068;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .language_button:hover{
+    background-color: #f97068;
+    color:#fff;
+  }
+
     .hello {
       margin-left: 0px;
       margin-top: 50px;
