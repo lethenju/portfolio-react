@@ -1,11 +1,11 @@
-A reaally micro unit test framework for your C programs
 
-## Usage
+Ah, unitary tests, we will never repeat enough how they are important.
+TDD made its point : we lose way less time debugging code.
 
-Look at the example test suite in the example folder. There is a micro library that have only one function to multiply numbers. The different files are :
+On that subject, I admit having a lot of work to do.
 
-example.c is the code source of the mini library
+## TestMan
 
-example.h is the associated header
+Thats why I wanted an extremely simple and lightweight TU library.
 
-example_test.c is the unit test to test the library
+So I made it myself : and here is TestMan !

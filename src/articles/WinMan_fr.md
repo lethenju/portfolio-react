@@ -1,19 +1,16 @@
-When it comes to user interfaces, you rarely have the choice but to opt for a desktop environment to beneficiate complex features as multi-window systems. Those solutions are nice but goes heavy on ressources, if you are very limited with a low powered target, connected via SSH.
 
-CLI applications, on the other hand, are often not user friendly for non-developers, and people seems to avoid them. 
+Lorsqu'il s'agit d'implementer une interface utilisateur basé sur des fenêtres, vous êtes un peu obligé d'utiliser un environnement de bureau qui tourne sur un serveur X Window. Cette solution est bien mais prends beaucoup de resources, et c'est même carrément impossible si vous travaillez sur une cible très peu puissante, connectée en SSH.
 
-winman tries to tackle theses issues, via a complex window system, while maintaining a very easy to use API.
+Les application CLI, dans le même temps, sont souvent très peu accessibles pour des non développeurs, les gens semblent les éviter comme la peste.
 
-Some nice TUI applications exists, like ui-rs for rust, but not many uses a true window system.
+WinMan essaye donc de répondre a ces problèmes, avec un système complexe de fenêtrage dans le terminal, tout en gardant une API extrèmement simple a utiliser.
 
 ## Description
 
-Winman stands for Window Manager. It is used as building blocks to create real TUI (Text User Interface) applications.
+WinMan veut dire "Window Manager". Il s'agit d'une librairie graphique, faite par dessus Termlib (un autre de mes projets), pour construire des applications dans le terminal.
 
-It provides windows, that can be filled with widgets.
-Those widgets can be buttons, text, or simpler shapes.
+Il propose donc des fenêtres, qui peuvent être remplies par des widgets, qui peuvent donc être des boutons, du texte ou des formes plus simples (lignes, rectangles, cercles..).
 
-## What I learned
+## Ce que j'ai appris
 
-I gained experience with C development and makefile building while developing this project. I also learned how to use CMake when I switched from manual makefiles to Cmake.
-
+J'ai gagné de l'expérience en développement C et en écriture de makefile en développant ce projet. J'ai aussi appris a utiliser CMake quand j'ai migré d'un système de makefile manuels a CMake.
