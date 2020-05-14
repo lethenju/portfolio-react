@@ -19,24 +19,12 @@ class App extends React.Component {
     // Prevent selecting text to change page
     let selection = window.getSelection();
     // Load projects 
-    if (this.state.language === 'fr-FR'){
-      project.markdown = project.name+"_fr"
-    } else {
-      project.markdown = project.name
-    }
-    import(`./articles/${project.markdown}.md`)
-    .then(m=>m.default)
-    .then(path=>fetch(path))
-    .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
-    .then(md=>{project.markdown = md})
-    .catch(err => {console.error(err);project.markdown = this.state.language === "fr-FR" ? "Article non trouvé :(" : "Didnt find article :("})
-    .then(_ => {if (selection.toString().length === 0) {
+    if (selection.toString().length === 0) {
       this.setState({
         project_page: true,
         project: project
       });
-    }})
-  
+    }
 
     
   }

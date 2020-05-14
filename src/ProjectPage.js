@@ -25,6 +25,16 @@ export default function ProjectPage(props) {
     };
   });
   let project = props.project
+  let the_path = project.name
+  if (props.language === 'fr-FR'){
+     the_path = project.name+"_fr"
+  } 
+  import(`./articles/${the_path}.md`)
+  .then(m=>m.default)
+  .then(path=>fetch(path))
+  .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
+  .then(md=>{project.markdown = md})
+  .catch(err => {console.error(err);project.markdown = props.language === "fr-FR" ? "Article non trouvé :(" : "Didnt find article :("})
 
   return (
     <div className="ProjectPage">
@@ -73,11 +83,13 @@ export default function ProjectPage(props) {
               alt="Project screenshot"
             />
           )}
-          <MarkdownView
-            className="markdown_view"
-            markdown={project.markdown}
-            options={{ tables: true, emoji: true }}
-          />
+        { project.markdown === "" ? "" : 
+            <MarkdownView
+              className="markdown_view"
+              markdown={project.markdown}
+              options={{ tables: true, emoji: true }}
+            />
+        }
         </div>
       </div>
       {window.innerWidth < 1400 ? (
