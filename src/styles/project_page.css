@@ -118,7 +118,12 @@ margin-left: 40%;
 width: 50%;
 height: 100%;
 overflow: hidden;
+-ms-overflow-style: none;
 }
+.ProjectPage_mainPane:-webkit-scrollbar {
+display: none;
+}
+
 .ProjectPage_mainPane_article {
 width: 100%;
 height: 100%;
@@ -188,6 +193,8 @@ text-decoration: none;
         margin: auto;
 
     }
+
+      
     .markdown_view {
         animation: none;
         -webkit-animation: none;
