@@ -20,7 +20,10 @@ h3 {
 p {
     color: #f9f7f3;;
 }
+li {
+    color: #f9f7f3;;
 
+}
 .ProjectPage_sidePane {
     position: fixed;
     margin-left: 105px;

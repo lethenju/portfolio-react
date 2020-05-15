@@ -1,40 +1,25 @@
 
-  When designing applications, one of the most useful debugging tool is to trace
-what is happening in the application.
-For that, you could simply use a printf() function, but you will soon feel
-bloated in loads of messages.
+Quand on développe une application, un des outils de debuggage les plus utiles c'est de tracer ce qu'il se passe dans ton application.
+Pour rendre possible ca, on peut utiliser des fonctions printf(), mais vous allez vous retrouvez rapidement inondés de messages inutiles.
 
-One idea is to create a leveled log system, with error logs, warning logs etc,
-and decide to show only what you need.
+Une idée est donc de créer un système log par niveaux (error, warning, info.. etc) et décider d'afficher seulement ce dont on a besoin.
 
-But no need of a real project for that, a simple solution is to use macros..
+Mais pas besoin d'un vrai projet pour ca, de simple macros suffisent, pas vrai ?
 
-## So whats the problem ?
+## Allo Houston on a un problème
 
-We have all been through the famous situation where a million logs comes in a second
-we need to pause everything and read it through, its going too fast !
+On a tous été dans la fameuse situation où un million de logs arrivent en une seconde, on doit mettre pause et tout lire, ca va trop vite !
 
-Also, imagine you're working on a TUI project. The applications renders in the terminal 
-directly. You can't use your stdout for logging, of course..
+En plus, imaginez que vous travaillez sur un projet qui utilise une interface utilisateur dans le terminal. L'application est dans le terminal, 
+on peut donc pas utiliser stdout pour les logs..
 
-## What can I do ?
+## Et voila LogSystem
 
-Thats where log_system comes handy :
+C'est la que LogSystem devient utile :
 
-The log_system is buffered. When you log many messages at once, you can specify 
-a maximum speed to never feel totally bloated with no time to read logs!
+Il est basé sur un système de buffer. On peut spécifier une vitesse maximale de défilement des logs, ainsi les logs seront buffered pour ne jamais se retrouver dans une situation où on ne peut rien lire.
 
-You can also write logs to a open socket, 
-and if a log_system server application is open elsewhere, your logs will come here !
+On peut aussi écrire les logs sur le réseau, et si un serveur LogSystem est ouvert
+quelque part sur votre réseau local (ou sur votre PC local directement), les logs arriveront là !
 
-You can also choose to write in a file !
-
-## What is log_system actually ?
-
-Log_system is a simple module for managing a logging system to log
-your messages on different outputs (files, stdout..)
-
-It is also a server, to show your log messages in real time in another app !
-(or even remotely if you open your ports ! )
-
-
+Enfin on peut aussi rediriger les logs vers un simple fichier de log.
