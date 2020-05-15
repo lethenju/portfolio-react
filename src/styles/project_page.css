@@ -118,7 +118,6 @@ margin-left: 40%;
 width: 50%;
 height: 100%;
 overflow: hidden;
--ms-overflow-style: none;
 }
 .ProjectPage_mainPane:-webkit-scrollbar {
     display: none;
@@ -197,7 +196,6 @@ text-decoration: none;
         margin: auto;
 
     }
-
     .BackButton {
         display: unset;
         position: fixed;
