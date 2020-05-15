@@ -12,9 +12,9 @@ import glob
 import shutil
 import json
 
-_path = "C:/Users/TEMP.JULIEN-PC/Documents/"
 _dev_dir="portfolio-react"
 _prod_dir="lethenju.github.io"
+_path = os.getcwd().replace(_dev_dir,"")
 
 
 print(" === AUTOMATED BUILD SCRIPT === ")
