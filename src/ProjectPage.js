@@ -83,13 +83,20 @@ export default function ProjectPage(props) {
               alt="Project screenshot"
             />
           )}
-        { project.markdown === "" ? "" : 
-            <MarkdownView
-              className="markdown_view"
-              markdown={project.markdown}
-              options={{ tables: true, emoji: true }}
-            />
-        }
+        {window.width > 1000 ?  // Si on est sur desktop
+          project.markdown === "" ?
+             "" :
+             <MarkdownView // Montage du markdown view pour l'anim d'entrée quand il a load
+             className="markdown_view"
+             markdown={project.markdown}
+             options={{ tables: true, emoji: true }}
+           />
+         : <MarkdownView // Sinon sur mobile, pas d'anim
+           className="markdown_view"
+           markdown={project.markdown}
+           options={{ tables: true, emoji: true }}
+         />
+      }
         </div>
       </div>
       {window.innerWidth < 1400 ? (

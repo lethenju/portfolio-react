@@ -121,8 +121,8 @@ overflow: hidden;
 -ms-overflow-style: none;
 }
 .ProjectPage_mainPane:-webkit-scrollbar {
-display: none;
-}
+    display: none;
+    }
 
 .ProjectPage_mainPane_article {
 width: 100%;
@@ -130,6 +130,10 @@ height: 100%;
 overflow-y: scroll;
 padding-right: 17px;
 box-sizing: content-box;
+-ms-overflow-style: none;
+}
+.ProjectPage_mainPane_article:-webkit-scrollbar {
+display: none;
 }
 
 .ProjectPage .markdown_view {
@@ -194,14 +198,6 @@ text-decoration: none;
 
     }
 
-      
-    .markdown_view {
-        animation: none;
-        -webkit-animation: none;
-        -moz-animation: none;
-        -o-animation: none;
-        -ms-animation: none;
-    }
     .BackButton {
         display: unset;
         position: fixed;
