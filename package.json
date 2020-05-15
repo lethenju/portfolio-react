@@ -1,6 +1,6 @@
 {
   "name": "julien_le_theno_portfolio",
-  "version": "0.2.0",
+  "version": "0.2.0_dev_fix_mobile_md_display_1",
   "description": "Showcase of my different projects",
   "keywords": [],
   "main": "src/index.js",

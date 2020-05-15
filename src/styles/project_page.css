@@ -188,7 +188,13 @@ text-decoration: none;
         margin: auto;
 
     }
-
+    .markdown_view {
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        -ms-animation: none;
+    }
     .BackButton {
         display: unset;
         position: fixed;
