@@ -1,92 +1,92 @@
 {
-    "projects" : [
-        {
-        "name": "WinMan",
-        "description_en": "Terminal “Window Manager” in C",
-        "description_fr": "Système de 'fenêtres' dans le terminal, en C",
-        "link" :"github.com/lethenju/winman",
-        "screenshot":"res/logo_winman.svg",
-        "markdown": ""
-        },
-        {
-        "name": "TermLib",
-        "description_en": "Terminal UI library in C",
-        "description_fr": "Librairie d'UI dans le terminal en C",
-        "link" :"github.com/lethenju/termlib",
-        "screenshot":"res/logo_termlib.png",
-        "markdown": ""
-        },
-        {
-        "name": "GoGenda",
-        "description_en": "CLI client for Google Agenda focused on productivity",
-        "description_fr": "Client CLI pour Google Agenda axé sur la productivité, en Go",
-        "link" :"github.com/lethenju/gogenda",
-        "screenshot":"res/logo_gogenda.svg",
-        "markdown": ""
-        },
-        {
-        "name": "SpotifyRust",
-        "description_en": "CLI Client for Spotify, in Rust",
-        "description_fr": "Client CLI pour Spotify, en Rust",
-        "link" :"github.com/lethenju/spotify_rust",
-        "screenshot":"",
-        "markdown": ""
-        },
-        {
-        "name": "OpenGL_FW",
-        "description_en": "Minimalist OpenGL framework built on top of glfw, in C++",
-        "description_fr": "Framework OpenGL minimaliste sur glfw, en C++",
-        "link" :"github.com/lethenju/opengl_framework",
-        "screenshot":"",
-        "markdown": ""
-        },
-        {
-        "name": "Portfolio",
-        "description_en": "This very website, my own portfolio, fait en ReactJS",
-        "description_fr": "Le site que vous visitez actuellement, mon portfolio, fait en ReactJS",
-        "link" :"github.com/lethenju/portfolio-react",
-        "screenshot":"",
-        "markdown": ""
-        },
-        {
-        "name": "GoState",
-        "description_en": "State machine framework, in Go",
-        "description_fr": "Framework de machine a état, en Go",
-        "link" :"github.com/lethenju/gostate",
-        "screenshot":"",
-        "markdown": ""
-        },
-        {
-        "name": "Databash",
-        "description_en": "Database system in Bash",
-        "description_fr": "Système de base de données en Bash",
-        "link" :"github.com/lethenju/databash",
-        "screenshot":"",
-        "markdown": ""
-        },
-        {
-        "name": "TestMan",
-        "description_en": "Micro Unit Test framework in C",
-        "description_fr": "Micro framework de tests unitaires en C",
-        "link" :"github.com/lethenju/testman",
-        "screenshot": "",
-        "markdown": ""
-        },
-        {
-        "name": "ResMan",
-        "description_en": "Resource Manager, in C",
-        "description_fr": "Manager de Ressources, en C",
-        "link" :"github.com/lethenju/resman",
-        "screenshot": "",
-        "markdown": ""
-        },
-        {
-        "name": "LogSystem",
-        "description_en": "Small log system in C",
-        "description_fr": "Système de Log en C",
-        "link" : "github.com/lethenju/log_system",
-        "screenshot": "res/logo_log_system.png",
-        "markdown": ""
-        }
-]
+  "projects": [
+    {
+      "name": "WinMan",
+      "description_en": "Terminal “Window Manager” in C",
+      "description_fr": "Système de 'fenêtres' dans le terminal, en C",
+      "link": "github.com/lethenju/winman",
+      "screenshot": "res/logo_winman.svg",
+      "markdown": ""
+    },
+    {
+      "name": "TermLib",
+      "description_en": "Terminal UI library in C",
+      "description_fr": "Librairie d'UI dans le terminal en C",
+      "link": "github.com/lethenju/termlib",
+      "screenshot": "res/logo_termlib.png",
+      "markdown": ""
+    },
+    {
+      "name": "GoGenda",
+      "description_en": "CLI client for Google Agenda focused on productivity",
+      "description_fr": "Client CLI pour Google Agenda axé sur la productivité, en Go",
+      "link": "github.com/lethenju/gogenda",
+      "screenshot": "res/logo_gogenda.svg",
+      "markdown": ""
+    },
+    {
+      "name": "SpotifyRust",
+      "description_en": "CLI Client for Spotify, in Rust",
+      "description_fr": "Client CLI pour Spotify, en Rust",
+      "link": "github.com/lethenju/spotify_rust",
+      "screenshot": "",
+      "markdown": ""
+    },
+    {
+      "name": "OpenGL_FW",
+      "description_en": "Minimalist OpenGL framework built on top of glfw, in C++",
+      "description_fr": "Framework OpenGL minimaliste sur glfw, en C++",
+      "link": "github.com/lethenju/opengl_framework",
+      "screenshot": "",
+      "markdown": ""
+    },
+    {
+      "name": "Portfolio",
+      "description_en": "This very website, my own portfolio, fait en ReactJS",
+      "description_fr": "Le site que vous visitez actuellement, mon portfolio, fait en ReactJS",
+      "link": "github.com/lethenju/portfolio-react",
+      "screenshot": "",
+      "markdown": ""
+    },
+    {
+      "name": "GoState",
+      "description_en": "State machine framework, in Go",
+      "description_fr": "Framework de machine a état, en Go",
+      "link": "github.com/lethenju/gostate",
+      "screenshot": "",
+      "markdown": ""
+    },
+    {
+      "name": "Databash",
+      "description_en": "Database system in Bash",
+      "description_fr": "Système de base de données en Bash",
+      "link": "github.com/lethenju/databash",
+      "screenshot": "",
+      "markdown": ""
+    },
+    {
+      "name": "TestMan",
+      "description_en": "Micro Unit Test framework in C",
+      "description_fr": "Micro framework de tests unitaires en C",
+      "link": "github.com/lethenju/testman",
+      "screenshot": "",
+      "markdown": ""
+    },
+    {
+      "name": "ResMan",
+      "description_en": "Resource Manager, in C",
+      "description_fr": "Manager de Ressources, en C",
+      "link": "github.com/lethenju/resman",
+      "screenshot": "",
+      "markdown": ""
+    },
+    {
+      "name": "LogSystem",
+      "description_en": "Small log system in C",
+      "description_fr": "Système de Log en C",
+      "link": "github.com/lethenju/log_system",
+      "screenshot": "res/logo_log_system.png",
+      "markdown": ""
+    }
+  ]
 }

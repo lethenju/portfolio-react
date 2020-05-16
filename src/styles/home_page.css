@@ -1,8 +1,7 @@
-
 .App {
-    font-family: roboto;
-    margin: 0;
-    height: 100%;
+  font-family: roboto;
+  margin: 0;
+  height: 100%;
 }
 body {
   margin: 0;
@@ -10,17 +9,17 @@ body {
 .language_buttons {
   margin-left: 95%;
 }
-.language_button{
+.language_button {
   margin: 10px;
   background-color: #fff;
-  color:#f97068;
+  color: #f97068;
   border: 2px solid #f97068;
   border-radius: 10px;
   transition: 0.3s;
 }
-.language_button:hover{
+.language_button:hover {
   background-color: #f97068;
-  color:#fff;
+  color: #fff;
 }
 .hello {
   margin-left: 109px;
@@ -53,61 +52,58 @@ h2 {
   font-weight: 200;
 }
 
-
-
 @media (max-width: 1200px) {
-    .hello {
-      text-align: center;
-      margin-left: 0;
-    }
-    .hello h1 {
-      font-size: 40px;
-    }
-    .my-name h1 {
-      font-size: 42px;
-    }
+  .hello {
+    text-align: center;
+    margin-left: 0;
+  }
+  .hello h1 {
+    font-size: 40px;
+  }
+  .my-name h1 {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 1000px) {
   .language_buttons {
-    margin: 0
+    margin: 0;
   }
-  .language_button{
+  .language_button {
     margin: 10px;
     background-color: #fff;
-    color:#f97068;
+    color: #f97068;
     border: 2px solid #f97068;
     border-radius: 10px;
     transition: 0.3s;
   }
-  .language_button:hover{
+  .language_button:hover {
     background-color: #f97068;
-    color:#fff;
+    color: #fff;
   }
 
-    .hello {
-      margin-left: 0px;
-      margin-top: 50px;
-    }
-    .my-name {
-      margin: 0px;
-      margin-bottom: -30px;
-      background: #2b303a;
-      display: absolute;
-    }
+  .hello {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  .my-name {
+    margin: 0px;
+    margin-bottom: -30px;
+    background: #2b303a;
+    display: absolute;
+  }
 }
 
-
 @media (max-width: 850px) {
-    h1 {
-      font-size: 50px;
-    }
-    .my-name_text {
-      font-size: 50px;
-    }
-  
-    h2 {
-      color: #fff;
-      font-weight: 200;
-    }
-}  
+  h1 {
+    font-size: 50px;
+  }
+  .my-name_text {
+    font-size: 50px;
+  }
+
+  h2 {
+    color: #fff;
+    font-weight: 200;
+  }
+}

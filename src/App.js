@@ -12,32 +12,35 @@ class App extends React.Component {
     this.set_language = this.set_language.bind(this);
     this.state = {
       project_page: false,
-      language: window.navigator.language
+      language: window.navigator.language,
     };
   }
   switch_to_project(project) {
     // Prevent selecting text to change page
     let selection = window.getSelection();
-    // Load projects 
+    // Load projects
     if (selection.toString().length === 0) {
       this.setState({
         project_page: true,
-        project: project
+        project: project,
       });
     }
-
-    
   }
   switch_to_homepage() {
     this.setState({ project_page: false });
   }
   set_language(language) {
-    this.setState({language: language})
+    this.setState({ language: language });
   }
   render() {
     return (
       <div className="App">
-        <HomePage language={this.state.language} set_language_callback={this.set_language} switch_to_project_callback={this.switch_to_project} animated={this.state.project_page === false} />
+        <HomePage
+          language={this.state.language}
+          set_language_callback={this.set_language}
+          switch_to_project_callback={this.switch_to_project}
+          animated={this.state.project_page === false}
+        />
         <CSSTransition
           in={this.state.project_page}
           timeout={300}
