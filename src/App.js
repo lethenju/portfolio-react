@@ -2,7 +2,7 @@ import React from "react";
 import { CSSTransition } from "react-transition-group";
 import ProjectPage from "./ProjectPage";
 import HomePage from "./HomePage";
-import "./styles.css";
+import "./styles.scss";
 
 class App extends React.Component {
   constructor(props) {

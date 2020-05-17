@@ -96,7 +96,9 @@ export default function ProjectPage(props) {
               options={{ tables: true, emoji: true }}
             />
           ) : (
-            ""
+            <div className="placeholder">
+              <div className="loading" />
+            </div>
           )}
         </div>
       </div>
