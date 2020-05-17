@@ -6,10 +6,12 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(faArrowLeft);
 
 export default function ProjectPage(props) {
-  const [_, setDimensions] = React.useState({
+  const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth
   });
+  // TO know when the markdown has been loaded
+  const [pageReady, setPageReady] = React.useState(false)
   React.useEffect(() => {
     function handleResize() {
       setDimensions({
@@ -33,13 +35,12 @@ export default function ProjectPage(props) {
   .then(m=>m.default)
   .then(path=>fetch(path))
   .then(response=>response.ok?response.text():Promise.reject(new Error(response.statusText)))
-  .then(md=>{project.markdown = md})
+  .then(md=>{project.markdown = md; setPageReady(true)})
   .catch(err => {console.error(err);project.markdown = props.language === "fr-FR" ? "Article non trouvé :(" : "Didnt find article :("})
-
   return (
     <div className="ProjectPage">
       
-      {window.innerWidth > 1400 ? (
+      {dimensions.width > 1400 ? (
       <div className="ProjectPage_sidePane">
         <h1>{project.name}</h1>
         <h3>{project.description}</h3>
@@ -64,7 +65,7 @@ export default function ProjectPage(props) {
         ) : null}
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">
-        {window.innerWidth < 1400 ? (
+        {dimensions.width < 1400 ? (
           <div>
             <h1>{project.name}</h1>
             <h3>{project.description}</h3>
@@ -83,16 +84,17 @@ export default function ProjectPage(props) {
               alt="Project screenshot"
             />
           )}
-        { project.markdown === "" ? "" : 
+        { pageReady ? 
             <MarkdownView
               className="markdown_view"
               markdown={project.markdown}
               options={{ tables: true, emoji: true }}
             />
+            : ""
         }
         </div>
       </div>
-      {window.innerWidth < 1400 ? (
+      {dimensions.width < 1400 ? (
         <div id="wrapperButton">
           <button
             className="BackButton"
