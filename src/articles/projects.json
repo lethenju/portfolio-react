@@ -57,7 +57,7 @@
         "markdown": ""
         },
         {
-        "name": "Databash",
+        "name": "DataBash",
         "description_en": "Database system in Bash",
         "description_fr": "Système de base de données en Bash",
         "link" :"github.com/lethenju/databash",
