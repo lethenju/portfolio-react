@@ -68,6 +68,7 @@ function ProjectAnimated(props) {
       >
         <h3>{props.project.name}</h3>
         <p className="Description">{props.language === "fr-FR"? props.project.description_fr : props.project.description_en }</p>
+      <div className="ProgrammingLanguage"><p>{props.project.language}</p></div>
       </animated.div>
     </div>
   );

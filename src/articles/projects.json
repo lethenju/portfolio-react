@@ -2,91 +2,103 @@
     "projects" : [
         {
         "name": "WinMan",
-        "description_en": "Terminal “Window Manager” in C",
-        "description_fr": "Système de 'fenêtres' dans le terminal, en C",
+        "description_en": "Terminal “Window Manager”",
+        "description_fr": "Système de 'fenêtres' dans le terminal",
         "link" :"github.com/lethenju/winman",
         "screenshot":"res/logo_winman.svg",
-        "markdown": ""
+        "markdown": "",
+        "language": "C"
         },
         {
         "name": "TermLib",
-        "description_en": "Terminal UI library in C",
-        "description_fr": "Librairie d'UI dans le terminal en C",
+        "description_en": "Terminal UI library",
+        "description_fr": "Librairie d'UI dans le terminal",
         "link" :"github.com/lethenju/termlib",
         "screenshot":"res/logo_termlib.png",
-        "markdown": ""
+        "markdown": "",
+        "language": "C"
+        
         },
         {
         "name": "GoGenda",
         "description_en": "CLI client for Google Agenda focused on productivity",
-        "description_fr": "Client CLI pour Google Agenda axé sur la productivité, en Go",
+        "description_fr": "Client CLI pour Google Agenda axé sur la productivité",
         "link" :"github.com/lethenju/gogenda",
         "screenshot":"res/logo_gogenda.svg",
-        "markdown": ""
+        "markdown": "",
+        "language": "Go"
         },
         {
         "name": "SpotifyRust",
-        "description_en": "CLI Client for Spotify, in Rust",
-        "description_fr": "Client CLI pour Spotify, en Rust",
+        "description_en": "CLI Client for Spotify",
+        "description_fr": "Client CLI pour Spotify",
         "link" :"github.com/lethenju/spotify_rust",
         "screenshot":"",
-        "markdown": ""
+        "markdown": "",
+        "language": "Rust"
         },
         {
         "name": "OpenGL_FW",
-        "description_en": "Minimalist OpenGL framework built on top of glfw, in C++",
-        "description_fr": "Framework OpenGL minimaliste sur glfw, en C++",
+        "description_en": "Minimalist OpenGL framework built on top of glfw",
+        "description_fr": "Framework OpenGL minimaliste sur glfw",
         "link" :"github.com/lethenju/opengl_framework",
         "screenshot":"",
-        "markdown": ""
+        "markdown": "",
+        "language": "C++"
         },
         {
         "name": "Portfolio",
-        "description_en": "This very website, my own portfolio, fait en ReactJS",
-        "description_fr": "Le site que vous visitez actuellement, mon portfolio, fait en ReactJS",
+        "description_en": "This very website, my own portfolio",
+        "description_fr": "Le site que vous visitez actuellement, mon portfolio",
         "link" :"github.com/lethenju/portfolio-react",
         "screenshot":"",
-        "markdown": ""
+        "markdown": "",
+        "language": "ReactJS"
         },
         {
         "name": "GoState",
-        "description_en": "State machine framework, in Go",
-        "description_fr": "Framework de machine a état, en Go",
+        "description_en": "State machine framework",
+        "description_fr": "Framework de machine a état",
         "link" :"github.com/lethenju/gostate",
         "screenshot":"",
-        "markdown": ""
+        "markdown": "",
+        "language": "Go"
         },
         {
         "name": "DataBash",
-        "description_en": "Database system in Bash",
-        "description_fr": "Système de base de données en Bash",
+        "description_en": "Database system",
+        "description_fr": "Système de base de données",
         "link" :"github.com/lethenju/databash",
         "screenshot":"",
-        "markdown": ""
+        "markdown": "",
+        "language": "Bash"
         },
         {
         "name": "TestMan",
-        "description_en": "Micro Unit Test framework in C",
-        "description_fr": "Micro framework de tests unitaires en C",
+        "description_en": "Micro Unit Test framework",
+        "description_fr": "Micro framework de tests unitaires",
         "link" :"github.com/lethenju/testman",
         "screenshot": "",
-        "markdown": ""
+        "markdown": "",
+        "language": "C"
         },
         {
         "name": "ResMan",
-        "description_en": "Resource Manager, in C",
-        "description_fr": "Manager de Ressources, en C",
+        "description_en": "Resource Manager",
+        "description_fr": "Manager de Ressources",
         "link" :"github.com/lethenju/resman",
         "screenshot": "",
-        "markdown": ""
+        "markdown": "",
+        "language": "C"
         },
         {
         "name": "LogSystem",
-        "description_en": "Small log system in C",
-        "description_fr": "Système de Log en C",
+        "description_en": "lightweight log system",
+        "description_fr": "Leger système de Log",
         "link" : "github.com/lethenju/log_system",
         "screenshot": "res/logo_log_system.png",
-        "markdown": ""
+        "markdown": "",
+        "language": "C"
         }
 ]
 }
