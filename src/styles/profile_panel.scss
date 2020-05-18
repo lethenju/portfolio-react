@@ -1,8 +1,11 @@
+$orange : #f97068;
+$white : #fff;
+
 .ProfilePanel {
   display: inline-flex;
   margin-top: 100px;
   width: 100%;
-  background-color: #f97068;
+  background-color: $orange;
   }
   .ProfilePanel_SidePane {
   margin-left: 10%;
@@ -12,7 +15,7 @@
   }
   .ProfilePanel h2 {
   margin-top: 70px;
-  color: #fff;
+  color: $white;
   font-family: roboto;
   font-weight: 100;
   font-size: 60px;
@@ -20,7 +23,7 @@
   .ProfilePanel p {
   margin-top: 50px;
   margin-left: 30px;
-  color: #fff;
+  color: $white;
   font-family: roboto;
   font-weight: 100;
   font-size: 30px;
@@ -33,15 +36,15 @@
   }
   
   .button_big {
-  background-color: #f97068;
+  background-color: $orange;
   display: inline-block;
   margin-top: 10px;
   margin-right: 10%;
   width: 130px;
   height: 35px;
-  border: 2px solid #fff;
+  border: 2px solid $white;
   border-radius: 50px;
-  color: #fff;
+  color: $white;
   font-family: roboto;
   font-weight: 300;
   text-align: center;
@@ -58,8 +61,8 @@
   width: 200%;
   }
   .button_big:hover {
-  background-color: #fff;
-  color: #f97068;
+  background-color: $white;
+  color: $orange;
   }
   
   @media (max-width: 1700px) {
