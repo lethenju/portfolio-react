@@ -7,6 +7,9 @@
 html, body {
   padding: 0;
   margin: 0;
+  min-width:360px;
+  width: auto !important;
+  width:360px;
 }
 .language_buttons {
   margin-left: 95%;
