@@ -1,12 +1,12 @@
 
-Lorsque vous voulez enregistrer des données de manière persistente, soit vous devez developper une API pour un stockage local, et choisir vous même le protocole des données (JSON, CSV, YAML..), ou vous pouvez utiliser un serveur SQL, ce qui nécessite beaucoup de setup, et utilise potentiellement beaucoup de ressources comparés aux besoins de votre appli.
+Lorsque vous voulez enregistrer des données de manière persistente, soit vous developpez une API pour un stockage local, et choisir vous même le protocole des données (JSON, CSV, YAML..), ou vous pouvez utiliser un serveur SQL, ce qui nécessite beaucoup de setup, et utilise potentiellement beaucoup de ressources comparés aux besoins de votre appli.
 Ce projet a été fait pour simplifier tout ça, en vous donnant une solution de stockage de données, basé sur bash et perl, en utilisant simplement des RegEx.
 
 C'est simple, c'est rapide, c'est efficace.
 
 ## Description
 
-Un simple script bash vous fournit une API complète pour récuperer, ajouter, supprimer, mettre a jour des données dans une base de donnée spécifique.
+Un simple script bash vous fournit une API complète pour récuperer, ajouter, supprimer, mettre à jour des données dans une base de donnée spécifique.
 Le stockage est construit, comme SQL, par des tables dans des bases que l'on remplit, et tout est écrit dans un seul fichier.
 
 Un mécanisme de protection de concurrence protège vos données si plusieurs instances de databash utilisent le même fichier au même moment.
