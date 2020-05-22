@@ -8,7 +8,7 @@ I used React to develop this front-only website.
 
 ## Is it hosted somewhere ?
 
-Yes of course : head to lethenju.github.io to see it up and running ! Please not this is the adress of the production code, and not the dev one, so it could be slightly different.
+Yes of course, I use Netfliy to automatically build and deploy my portfolio. You can visit in by going [here](julien-le-theno.digital)
 
 ## Any questions or suggestions ?
 
