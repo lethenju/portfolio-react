@@ -30,6 +30,9 @@ export default function ProjectPage(props) {
   let the_path = project.name;
   if (props.language === "fr-FR") {
     the_path = project.name + "_fr";
+    project.description = project.description_fr
+  } else {
+    project.description = project.description_en
   }
   import(`./articles/${the_path}.md`)
     .then((m) => m.default)
@@ -45,6 +48,7 @@ export default function ProjectPage(props) {
     })
     .catch((err) => {
       console.error(err);
+      setPageReady(true);
       project.markdown =
         props.language === "fr-FR"
           ? "Article non trouvé :("

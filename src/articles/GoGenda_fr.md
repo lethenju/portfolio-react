@@ -1,17 +1,17 @@
 
 
 Cela fait déjà quelques temps (en fait plus d'un an) que je log la plupart des choses que je fais de mes journées, directement sur Google Agenda.
-Vous vous demandez sûrement pourquoi je fais ca ?
+Vous vous demandez sûrement pourquoi je fais ça ?
 
 J'aime avoir une vue sur ce a quoi ressemblent mes journées, sans juste me fier a mon point de vue biaisé.
 J'aime vraiment voir si j'ai travaillé plus un tel jour ou un tel autre. Ne me jugez pas.
 
-Et je loggais tout a la main, dans l'application Google Agenda sur mon smartphone, ou plus fréquemment dans la web app Google Agenda. 
-En plus, l'UX de Google Agenda est pas vraiment adapté a cette utilisation : pour créer un événement d'une couleur particulière, il faut le creer avec la couleur par défault, puis modifier la couleur.
+Et je loggais tout à la main, dans l'application Google Agenda sur mon smartphone, ou plus fréquemment dans la web app Google Agenda. 
+Il faut noter que l'UX de Google Agenda est pas vraiment adapté a cette utilisation : pour créer un événement d'une couleur particulière, il faut le créer avec la couleur par défaut, puis modifier la couleur.
 Il est aussi impossible de mettre en place en un seul clic un événement commençant immédiatement.
 
-Je voulais automatiser un peu cette action, pour la simplifier largement.
-Et puis Google propose pas mal d'API cools a utiliser, et ce projet était l'occasion parfaite de les essayer
+Je voulais automatiser cette action, pour la simplifier largement.
+Et puis Google propose pas mal d'API intéressantes a utiliser, et ce projet était l'occasion parfaite de les essayer.
 
 ## Description
 

@@ -1,6 +1,24 @@
 import React from "react";
 
 export default function ProfilePanel(props) {
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return (_) => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
   return (
     <div className="ProfilePanel">
       <div className="ProfilePanel_SidePane">
@@ -9,6 +27,12 @@ export default function ProfilePanel(props) {
           src="https://avatars3.githubusercontent.com/u/19967417?s=460&u=ecd48d2ab4260cbee902be8fde3828068cd5f0f2&v=4"
           alt="profile pic"
         />
+        {dimensions.width >= 1000 ? 
+        <div className="button_row">
+          <a className="button_big" href="https://www.github.com/lethenju">GitHub</a>
+          <a className="button_big" href="https://www.linkedin.com/in/julien-letheno/">LinkedIn</a>
+          <a className="button_big" href="mailto:julien.letheno@gmail.com">Send mail</a> 
+        </div> : "" }
       </div>
       <div className="ProfilePanel_MainPane">
         {props.language === "fr-FR" ? (
@@ -32,11 +56,12 @@ export default function ProfilePanel(props) {
           </p>
         </div>
         )}
+        {dimensions.width < 1000 ? 
         <div className="button_row">
           <a className="button_big" href="https://www.github.com/lethenju">GitHub</a>
           <a className="button_big" href="https://www.linkedin.com/in/julien-letheno/">LinkedIn</a>
           <a className="button_big" href="mailto:julien.letheno@gmail.com">Send mail</a> 
-        </div>
+        </div> : "" }
       </div>
     </div>
   );
