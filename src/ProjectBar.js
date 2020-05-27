@@ -29,10 +29,10 @@ export default function ProjectBar(props) {
     </div>
   );
 }
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.1
+const calc = (x, y, middle_position_x, middle_position_y) => [
+  (middle_position_x - x) / 20,
+  (middle_position_y - y) / 20, 
+  1
 ];
 
 const trans = (x, y, s) =>
@@ -53,13 +53,24 @@ function ProjectAnimated(props) {
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 }
   }));
+  let middle_position_x = 0
+  let middle_position_y = 0
+  
 
   return (
     <div className="Project">
       <animated.div
+          ref={el => {
+            // el can be null - see https://reactjs.org/docs/refs-and-the-dom.html#caveats-with-callback-refs
+            if (!el) return;
+            
+            middle_position_x = el.getBoundingClientRect().x + el.getBoundingClientRect().width/2
+            middle_position_y = el.getBoundingClientRect().y + el.getBoundingClientRect().height/2
+            
+          }}
         className="Project_inside"
         tabIndex="0"
-        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y, middle_position_x, middle_position_y) })}
         onClick={() => props.hide_callback(props.project)}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{
