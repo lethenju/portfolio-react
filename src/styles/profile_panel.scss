@@ -1,5 +1,5 @@
 $orange : #f97068;
-$white : #fff;
+$text_color : #000;
 
 .ProfilePanel {
   display: inline-flex;
@@ -15,7 +15,7 @@ $white : #fff;
   }
   .ProfilePanel h2 {
   margin-top: 70px;
-  color: $white;
+  color: $text_color;
   font-family: roboto;
   font-weight: 100;
   font-size: 60px;
@@ -23,9 +23,9 @@ $white : #fff;
   .ProfilePanel p {
   margin-top: 50px;
   margin-left: 30px;
-  color: $white;
+  color: $text_color;
   font-family: roboto;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 30px;
   }
   
@@ -42,9 +42,9 @@ $white : #fff;
   margin-right: 10%;
   width: 130px;
   height: 35px;
-  border: 2px solid $white;
+  border: 2px solid $text_color;
   border-radius: 50px;
-  color: $white;
+  color: $text_color;
   font-family: roboto;
   font-weight: 300;
   text-align: center;
@@ -61,7 +61,7 @@ $white : #fff;
   width: 200%;
   }
   .button_big:hover {
-  background-color: $white;
+  background-color: $text_color;
   color: $orange;
   }
   
