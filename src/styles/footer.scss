@@ -4,16 +4,14 @@ footer {
   padding: 10px;
   background-color: #f97068;
 }
+footer p {
+  color:#000
+}
 @media (max-width: 850px) {
   footer {
     text-align: center;
     padding: 10px;
   }
-  footer a {
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
-    font-size: 20px;
-  }
+
 }
   
