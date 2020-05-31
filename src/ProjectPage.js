@@ -80,13 +80,13 @@ export default function ProjectPage(props) {
       <div className="ProjectPage_mainPane">
         <div className="ProjectPage_mainPane_article">
           {window.innerWidth < 1400 ? (
-            <div>
+            <>
               <h1>{project.name}</h1>
               <h3>{project.description}</h3>
               <div className="Link">
                 <a href={"https://" + project.link}>{project.link}</a>
               </div>
-            </div>
+            </>
           ) : null}
           {project.screenshot === "" ? (
             <div className="img_placeholder" /> // When there is no image yet

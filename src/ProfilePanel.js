@@ -36,7 +36,7 @@ export default function ProfilePanel(props) {
       </div>
       <div className="ProfilePanel_MainPane">
         {props.language === "fr-FR" ? (
-        <div>
+        <>
           <h2>Ingénieur Systèmes Embarqués</h2>
           <p>
             Passioné de développement Système, Linux, C et C++.
@@ -44,9 +44,9 @@ export default function ProfilePanel(props) {
             <br />
             <br /> J'adore aussi travailler sur des projets personnels ! En voici quelques un :)
           </p>
-        </div>
+        </>
         ) : (
-        <div>
+        <>
           <h2>Embedded Systems Engineer</h2>
           <p>
             Passionate about system developpement, Linux, C and C++.
@@ -54,7 +54,7 @@ export default function ProfilePanel(props) {
             <br />
             <br /> I also love working on side projects ! You can see a few of them below :)
           </p>
-        </div>
+        </>
         )}
         {dimensions.width < 1000 ? 
         <div className="button_row">

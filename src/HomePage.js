@@ -22,7 +22,7 @@ export default function HomePage(props) {
   let [language, setLanguage] = useState(props.language);
 
   return (
-    <div>
+    <>
       <div className="language_buttons">
         <button className="language_button" onClick={() => {setLanguage('fr-FR'); props.set_language_callback('fr-FR')}}>fr</button>
         <button className="language_button" onClick={() => {setLanguage('en-US'); props.set_language_callback('en-US')}}>en</button>
@@ -31,7 +31,7 @@ export default function HomePage(props) {
       <ProfilePanel language={language} />
       <ProjectBar language={language} hide_callback={props.switch_to_project_callback} animated={props.animated} />
       <Footer />
-    </div>
+    </>
     );
 
 }
