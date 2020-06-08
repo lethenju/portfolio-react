@@ -2,7 +2,7 @@
 If you want to store data, you either have to develop a file-based API and choose a protocol
 for the storage (JSON, CSV, YAML..), or you can use a SQL server, which requires a lot of setup
 and drain a lot of resources if you want to develop for a small target.
-This project was made to simplify all this, by giving you a permanent storage data solution, 
+DataBash was conceived to simplify all this, by giving you a permanent storage data solution, 
 based on bash and perl, with extensive use of regex.
 It is simple, it is fast, it is efficient.
 ## Description
