@@ -8,7 +8,7 @@ I used React to develop this front-only website.
 
 ## Is it hosted somewhere ?
 
-Yes of course, I use Netfliy to automatically build and deploy my portfolio. You can visit in by going [here](julien-le-theno.digital)
+Yes of course, I use [Netflify](https://www.netlify.com/) to automatically build and deploy my portfolio. You can visit in by going [here](https://julien-le-theno.digital)
 
 ## Any questions or suggestions ?
 
